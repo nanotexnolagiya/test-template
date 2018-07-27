@@ -1,0 +1,490 @@
+extends pug/base
+
+append vars
+	- title = 'Главная'
+	- description = 'Описание'
+block content
+	- var defaultLink = 'javascript:void(0);'
+	.h-container
+		.h-main
+			.header
+				.container
+					.header-section
+						.burger-section
+							a.burger-btn(href=".home-modal-menu")
+								span(data-text="Закрыть") Меню
+						.header-menu
+							ul.header-menuList
+								li.header-menuItem
+									.languages
+										.languagesItem
+											a.languagesItem__link(href=defaultLink) Рус
+										.languagesItem
+											a.languagesItem__link(href=defaultLink) Eng
+								li.header-menuItem
+									.socials
+										.socialsItem
+											a.socialsItem__link(href=defaultLink)
+												span.facebook
+										.socialsItem
+											a.socialsItem__link(href=defaultLink)
+												span.instagram
+								li.header-menuItem
+									span.select-filial
+										| Выберите гостиницу:
+									.header-contacts
+										a.header-contacts__current(href=defaultLink)
+											span.filial-name
+												| Asia Tashkent 
+												i.fa.fa-angle-down
+											span.filial-phone
+												| +998 (97) 
+												span.short-phone
+													| 455-36-72
+										.header-contacts-sub
+											.header-contacts-subItem
+												a.header-contacts-subItem__link(href=defaultLink)
+													span.filial-name
+														| Asia Ferghana 
+														i.fa.fa-arrow
+													span.filial-phone
+														| +998 (97) 
+														span.short-phone
+															| 455-36-72
+											.header-contacts-subItem
+												a.header-contacts-subItem__link(href=defaultLink)
+													span.filial-name
+														| Asia Khiva 
+														i.fa.fa-arrow
+													span.filial-phone
+														| +998 (97) 
+														span.short-phone
+															| 455-36-72
+											.header-contacts-subItem
+												a.header-contacts-subItem__link(href=defaultLink)
+													span.filial-name
+														| Asia Bukhara 
+														i.fa.fa-arrow
+													span.filial-phone
+														| +998 (97) 
+														span.short-phone
+															| 455-36-72
+											.header-contacts-subItem
+												a.header-contacts-subItem__link(href=defaultLink)
+													span.filial-name
+														| Asia Samarkand 
+														i.fa.fa-arrow
+													span.filial-phone
+														| +998 (97) 
+														span.short-phone
+															| 455-36-72
+								li.header-menuItem
+									.booking-section
+										a.booking-section__link(href=defaultLink)
+											span
+												| Забронировать номер
+			.logo-section
+				.container
+					.logo
+			.home-modal-menu
+				.container
+					ul.modal-menu
+						li.modal-menuItem
+							a.modal-menuItem__link(href="about.html")
+								| О компании
+							ul.sub-menu
+								li.sub-menuItem
+									a.sub-menuItem__link(href="about.html")
+										| О сети гостиниц
+								li.sub-menuItem
+									a.sub-menuItem__link(href="about.html")
+										| Турагентство
+						li.modal-menuItem
+							a.modal-menuItem__link(href="about.html")
+								| Гостиницы
+							ul.sub-menu
+								li.sub-menuItem
+									a.sub-menuItem__link(href="about.html")
+										| ASIA ТАШКЕНТ
+								li.sub-menuItem
+									a.sub-menuItem__link(href="about.html")
+										| ASIA САМАРКАНД
+								li.sub-menuItem
+									a.sub-menuItem__link(href="about.html")
+										| ASIA БУХАРА
+								li.sub-menuItem
+									a.sub-menuItem__link(href="about.html")
+										| ASIA ХИВА
+								li.sub-menuItem
+									a.sub-menuItem__link(href="about.html")
+										| ASIA ФЕРГАНА
+						li.modal-menuItem
+							a.modal-menuItem__link(href="#")
+								| Пресс-центр
+							ul.sub-menu
+								li.sub-menuItem
+									a.sub-menuItem__link(href="#")
+										| Спецпредложения
+								li.sub-menuItem
+									a.sub-menuItem__link(href="#")
+										| мероприятия и события
+								li.sub-menuItem
+									a.sub-menuItem__link(href="#")
+										| отзывы
+						li.modal-menuItem
+							a.modal-menuItem__link(href="#")
+								| О компании
+							ul.sub-menu
+								li.sub-menuItem
+									a.sub-menuItem__link(href="#")
+										| свяжитесь с нами
+								li.sub-menuItem
+									a.sub-menuItem__link(href="rooms.html")
+										| забронировать номер
+
+			#cube-slider.cube-slider
+				.cube-slider__item.cube-slider__item_active(style="background-image: url(images/slide-4-min.jpg)")
+					.page
+						.container
+							.page-title-section
+								.cube-page-title
+									.cube-page-title__title
+										| Добро пожаловать
+									.cube-page-title__subtitle
+										| в сеть гостиниц «Азия»
+									.cube-page-title__btn
+										a.more-btn(href=defaultLink)
+											| О сети гостиниц Азия
+											span
+												i.fa.fa-long-arrow-right
+
+								.cube-page-description
+									| Cеть Гостиниц Азия - одна из крупнейших в Узбекистане, представлена Гостиницами в городах: Ташкенте, Самарканде, Бухаре, Хиве и Фергане. Общий номерной фонд порядка 500 номеров. Сеть с гордостью можно назвать национальной Сетью Гостиниц.  Дизайн, структура и интерьер всех Гостиниц отвечают самым современным требованиям международного гостиничного хозяйства. Всем нашим гостям предложено высококачественное  обслуживание с неповторимым узбекским гостеприимством.
+							.cube-content
+								.advantages
+									.advantagesItem
+										.advantagesItem__image(style="background-image: url(images/sprites/svg/adv-1.svg);")
+										.advantagesItem__title
+											| Высокий уровень сервиса
+									.advantagesItem
+										.advantagesItem__image(style="background-image: url(images/sprites/svg/adv-2.svg);")
+										.advantagesItem__title
+											| удивительные спецпредложения
+									.advantagesItem
+										.advantagesItem__image(style="background-image: url(images/sprites/svg/adv-3.svg);")
+										.advantagesItem__title
+											| Доступные 
+											br
+											|  цены
+									.advantagesItem
+										.advantagesItem__image(style="background-image: url(images/sprites/svg/adv-4.svg);")
+										.advantagesItem__title
+											| Поддержка гостей 24 часа
+				.cube-slider__item(style="background-image: url(images/slide-2-min.jpg)")
+					.page
+						.container
+							.page-title-section
+								.cube-page-title
+									.cube-page-title__title
+										| Сеть гостиниц «Азия»
+									.cube-page-title__subtitle
+										| В 5-ти городах Узбекистана
+								.cube-page-description
+									.filials-tab
+										.filials-tabItem.active
+											.filials-tabItem__link
+												| ASIA ТАШКЕНТ
+										.filials-tabItem
+											.filials-tabItem__link
+												| ASIA САМАРКАНД
+										.filials-tabItem
+											.filials-tabItem__link
+												| ASIA БУХАРА
+										.filials-tabItem
+											.filials-tabItem__link
+												| ASIA ХИВА
+										.filials-tabItem
+											.filials-tabItem__link
+												| ASIA ФЕРГАНА
+							.cube-content
+								.filials-content
+									#tashkent.filials-contentItem.active
+										.filial-title
+											.filial-left
+												.filials-contentItem__title
+													span.big-title ASIA
+													span.simple-title ТАШКЕНТ
+											.filial-right
+										.filial-content
+											.filial-left
+												.filials-contentItem__image(style="background-image: url(images/asia-tashkent.png);")
+											.filial-right
+												.filials-contentItem__content
+													| Прекрасный отель с высоким качеством услуг, благоприятный как для групп путешественников, так и деловых людей. Asia Hotel Ташкент, обещает незабываемое впечатление от пребывания в Узбекистане
+												.filials-contentItem__btn
+													a.more-btn(href=defaultLink)
+														| подробнее
+														span
+															i.fa.fa-long-arrow-right
+									#samarkand.filials-contentItem
+										.filial-title
+											.filial-left
+												.filials-contentItem__title
+													span.big-title ASIA
+													span.simple-title САМАРКАНД
+											.filial-right
+										.filial-content
+											.filial-left
+												.filials-contentItem__image(style="background-image: url(images/asia-tashkent.png);")
+											.filial-right
+												.filials-contentItem__content
+													| Прекрасный отель с высоким качеством услуг, благоприятный как для групп путешественников, так и деловых людей. Asia Hotel Ташкент, обещает незабываемое впечатление от пребывания в Узбекистане
+												.filials-contentItem__btn
+													a.more-btn(href=defaultLink)
+														| подробнее
+														span
+															i.fa.fa-long-arrow-right
+									#bukhara.filials-contentItem
+										.filial-title
+											.filial-left
+												.filials-contentItem__title
+													span.big-title ASIA
+													span.simple-title БУХАРА
+											.filial-right
+										.filial-content
+											.filial-left
+												.filials-contentItem__image(style="background-image: url(images/asia-tashkent.png);")
+											.filial-right
+												.filials-contentItem__content
+													| Прекрасный отель с высоким качеством услуг, благоприятный как для групп путешественников, так и деловых людей. Asia Hotel Ташкент, обещает незабываемое впечатление от пребывания в Узбекистане
+												.filials-contentItem__btn
+													a.more-btn(href=defaultLink)
+														| подробнее
+														span
+															i.fa.fa-long-arrow-right
+									#khiva.filials-contentItem
+										.filial-title
+											.filial-left
+												.filials-contentItem__title
+													span.big-title ASIA
+													span.simple-title ХИВА
+											.filial-right
+										.filial-content
+											.filial-left
+												.filials-contentItem__image(style="background-image: url(images/asia-tashkent.png);")
+											.filial-right
+												.filials-contentItem__content
+													| Прекрасный отель с высоким качеством услуг, благоприятный как для групп путешественников, так и деловых людей. Asia Hotel Ташкент, обещает незабываемое впечатление от пребывания в Узбекистане
+												.filials-contentItem__btn
+													a.more-btn(href=defaultLink)
+														| подробнее
+														span
+															i.fa.fa-long-arrow-right
+									#fergana.filials-contentItem
+										.filial-title
+											.filial-left
+												.filials-contentItem__title
+													span.big-title ASIA
+													span.simple-title ФЕРГАНА
+											.filial-right
+										.filial-content
+											.filial-left
+												.filials-contentItem__image(style="background-image: url(images/asia-tashkent.png);")
+											.filial-right
+												.filials-contentItem__content
+													| Прекрасный отель с высоким качеством услуг, благоприятный как для групп путешественников, так и деловых людей. Asia Hotel Ташкент, обещает незабываемое впечатление от пребывания в Узбекистане
+												.filials-contentItem__btn
+													a.more-btn(href=defaultLink)
+														| подробнее
+														span
+															i.fa.fa-long-arrow-right
+					.mask
+				.cube-slider__item(style="background-image: url(images/slide-3-min.jpg)")
+					.page
+						.container
+							.page-title-section
+								.cube-page-title
+									.cube-page-title__title
+										| Мероприятия
+									.cube-page-title__subtitle
+										| и события
+								.cube-page-description
+									
+							.cube-content
+								.cube-events
+									.cube-eventsItem
+										.cube-eventsItem__image(style="background-image: url(images/post-image.png);")
+										.cube-eventsItem-content
+											.cube-eventsItem__date
+												span 02
+												| /04/2018
+											.cube-eventsItem__title
+												| В канун начала туристического сезона,1 апреля 2018 года в городе Бухаре проводился фестиваль « Насриддин Афанди и Восточные блюда».
+											.cube-eventsItem__btn
+												a.more-btn(href=defaultLink)
+													| подробнее
+													span
+														i.fa.fa-long-arrow-right
+									.cube-eventsItem
+										.cube-eventsItem__image(style="background-image: url(images/post-image.png);")
+										.cube-eventsItem-content
+											.cube-eventsItem__date
+												span 02
+												| /04/2018
+											.cube-eventsItem__title
+												| Участники фестиваля Шарк Тароналари в Отеле Азия Самарканд!
+											.cube-eventsItem__btn
+												a.more-btn(href=defaultLink)
+													| подробнее
+													span
+														i.fa.fa-long-arrow-right
+					.mask
+				.cube-slider__item(style="background-image: url(images/slide-5-min.jpg)")
+					.page
+						.container
+							.page-title-section
+								.cube-page-title
+									.cube-page-title__title
+										| Свяжитесь
+									.cube-page-title__subtitle
+										| с нами
+								.cube-page-description
+									| Вы выбираете нас, а значит, мы создадим все условия для комфортного и выгодного проживания
+									
+							.cube-content
+								.cube-contacts
+									.contacts-left
+										.contactsTab
+											.contactsTabItem.active
+												.contactsTabItem__link
+													| Телефоны
+											.contactsTabItem
+												.contactsTabItem__link
+													| эл. почты
+										.contactsContent
+											.contactsContentItem.active
+												.contactsWidget
+													.contactsWidgetItem
+														a.contactsWidgetItem__link(href=defaultLink)
+															span Asia Tashkent: 
+															| +998 (97) 455-36-72
+													.contactsWidgetItem
+														a.contactsWidgetItem__link(href=defaultLink)
+															span Asia Samarkand: 
+															| +998 (66) 235-71-56
+													.contactsWidgetItem
+														a.contactsWidgetItem__link(href=defaultLink)
+															span Asia Bukhara: 
+															| +998 (65) 224-64-31
+													.contactsWidgetItem
+														a.contactsWidgetItem__link(href=defaultLink)
+															span Asia Khiva: 
+															| +998 (91) 570-67-60
+													.contactsWidgetItem
+														a.contactsWidgetItem__link(href=defaultLink)
+															span Asia Ferghana: 
+															| +998 (73) 244-13-26
+											.contactsContentItem
+												.contactsWidget
+													.contactsWidgetItem
+														a.contactsWidgetItem__link(href=defaultLink)
+															span Asia Tashkent: 
+															| tashkent@asiahotel.uz
+													.contactsWidgetItem
+														a.contactsWidgetItem__link(href=defaultLink)
+															span Asia Samarkand: 
+															| samarkand@asiahotel.uz
+													.contactsWidgetItem
+														a.contactsWidgetItem__link(href=defaultLink)
+															span Asia Bukhara: 
+															| bukhara@asiahotel.uz
+													.contactsWidgetItem
+														a.contactsWidgetItem__link(href=defaultLink)
+															span Asia Khiva: 
+															| khiva@asiahotel.uz
+													.contactsWidgetItem
+														a.contactsWidgetItem__link(href=defaultLink)
+															span Asia Ferghana: 
+															| fergana@asiahotel.uz
+										.all-contacts
+											.more-btn
+												| все контакты
+												span
+													i.fa.fa-long-arrow-right
+									.contacts-right
+										.cube-form
+											form(action=defaultLink, method="post")
+												.form-wrap
+													.form-group
+														input#name(type="text")
+														label(for="name") Имя
+													.form-group
+														input#email(type="email")
+														label(for="email") Электронная почта
+													.form-group.custom-select
+														select
+															option(selected="" disabled="") Выберите гостиницу
+															option(value="tashkent") Asia Ташент
+															option(value="samarkand") Asia Самарканд
+															option(value="bukhara") Asia Бухара
+															option(value="khiva") Asia Хива
+															option(value="fergana") Asia Фергана
+												.form-wrap
+													.form-group
+														textarea#message
+														label(for="message") Сообщение
+													.form-group
+														#simple-captcha.visualCaptcha
+															.visualCaptcha-possibilities
+																.img
+																	a(href=defaultLink)
+																		img(src="images/icons/shirt.png", alt="")
+																.img
+																	a(href=defaultLink)
+																		img(src="images/icons/headphone.png", alt="")
+																.img
+																	a(href=defaultLink)
+																		img(src="images/icons/auto.png", alt="")
+																.img
+																	a(href=defaultLink)
+																		img(src="images/icons/buggy.png", alt="")
+																.img
+																	a(href=defaultLink)
+																		img(src="images/icons/coffee.png", alt="")
+																.img
+																	a(href=defaultLink)
+																		img(src="images/icons/airplain.png", alt="")
+															.visualCaptcha-explanation
+																| Выберите&nbsp;
+																span.active «наушники»
+																| , чтобы подтвердить, что&nbsp;Вы не&nbsp;робот
+												.form-wrap
+													.btn-wrap
+														.more-btn
+															| Отправить
+															span
+																i.fa.fa-long-arrow-right
+					.mask
+			.bullets-wrap
+				.bullets
+					.bullets__item.bullets__item_active
+					.bullets__item
+					.bullets__item
+					.bullets__item
+			.scroll-content
+			.home-footer
+				.container
+					.home-footer-section
+						.copyright
+							.copyright__title
+								| © СП ООО «Asia Trade», 2018
+							.copyright__description
+								| Сеть Гостиниц «Азия» в 5-ти городах Узбекистана: 
+								br
+								| Ташкент, Самарканд, Бухара, Хива, Фергана
+						.korden
+							.korden__logo
+							.korden__text
+								| Создание сайтов в Ташкенте
+							a.korden__link(href="http://korden.uz")
+			.pop-up-bg

@@ -1,0 +1,18 @@
+extends pug/base
+
+append vars
+    - title = 'О гостинице'
+    - body.classList = ['inner-page']
+block content
+    - var defaultLink = 'javascript:void(0);'
+    include pug/partials/header
+    .i-container
+        .i-main
+            include pug/partials/page-title
+            .inner-content.container
+                include pug/partials/sidebar
+                .content
+                    include pug/partials/footer
+    .page-mask.mask-top
+    .page-mask.mask-bottom
+

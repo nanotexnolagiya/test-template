@@ -1,0 +1,66 @@
+@mixin read-more($color: $color-home) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: $font-pf-din-text-comp-pro;
+    font-size: 17px;
+    line-height: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color;
+
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75px;
+        height: 32px;
+        margin-left: 8px;
+        background-color: $color;
+        border-radius: 15px;
+
+        .fa{
+            font-size: 16px;
+            color: $color-black;
+        }
+    }
+
+    &:hover {
+        span {
+            background: transparent;
+           .fa{
+                color: $color;
+           }
+        }
+    }
+}
+
+@mixin more($color, $arrow-color) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: $font-pf-din-text-comp-pro;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color;
+
+    span {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 75px;
+        height: 32px;
+        margin-left: 10px;
+        background-color: $color;
+        border-radius: 15px;
+
+        .fa {
+            color: $arrow-color;
+            font-size: 16px;
+        }
+    }
+}
