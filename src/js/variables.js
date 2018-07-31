@@ -29,5 +29,9 @@ module.exports = {
 	$roomsFilterItem: $('.rooms-filter .rooms-filterItem'),
 	$cardsItem: $('.cards .cardsItem'),
 	$roomGallery: $('.room-gallery'),
-	$fancybox: $('[data-fancybox="gallery"]')
+	$fancybox: $('[data-fancybox="gallery"]'),
+	$moreSwitch: $('#more-switch'),
+	$moreWrap: $('#more-wrap'),
+	$datepicker: $('.datepicker'),
+	$threeGallery: $('.three-gallery')
 };

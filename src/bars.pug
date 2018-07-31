@@ -1,0 +1,43 @@
+extends pug/base
+
+append vars
+    - title = 'Ресторан и бар'
+    - body.classList = ['inner-page']
+block content
+    - var defaultLink = 'javascript:void(0);'
+    include pug/partials/header
+    .i-container
+        .i-main
+            include pug/partials/page-title
+            .inner-content.container
+                include pug/partials/sidebar
+                .content
+                    .default-section
+                        h2 Заголовок H2.
+                        p Эта страница является самой первой и главной точкой посетителя сайта, и, поэтому важно заполнить ее наиболее качественной и интересной информацией, ведь именно прочитав ее, посетитель решит – оставаться на сайте или искать необходимую информацию в другом месте.
+                    .section-line
+                    .cards
+                        .cardsItem.odd.one
+                            .cardsItem__image(style="background-image: url(images/restoran.jpg);")
+                            .cardsItem-content
+                                .cardsItem__title Название ресторана
+                                .cardsItem__text Ресторан  гостиницы  с  летней  террасой  и  лобби  лаунж-бар  открыт  круглосуточно.
+                                .cardsItem__btn
+                                    a.read-more(href=defaultLink) 
+                                        | подробнее
+                                        span
+                                            i.fa.fa-long-arrow-right
+                        .cardsItem.even.two
+                            .cardsItem__image(style="background-image: url(images/two.jpg);")
+                            .cardsItem-content
+                                .cardsItem__title Название бара
+                                .cardsItem__text Ресторан  гостиницы  с  летней  террасой  и  лобби  лаунж-бар  открыт  круглосуточно.
+                                .cardsItem__btn
+                                    a.read-more(href=defaultLink)
+                                        | подробнее
+                                        span
+                                            i.fa.fa-long-arrow-right
+                    include pug/partials/footer
+    .page-mask.mask-top
+    .page-mask.mask-bottom
+

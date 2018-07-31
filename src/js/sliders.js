@@ -64,4 +64,11 @@ vars.$document.ready(() => {
 			}
 		}
 	});
+
+	vars.$threeGallery.owlCarousel({
+		nav : true,
+		navText: ['<i class="fa fa-arrow-left"></i>','<i class="fa fa-arrow-right"></i>'],
+		items: 3,
+		margin: 10
+	});
 })

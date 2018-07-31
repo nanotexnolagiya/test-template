@@ -1,0 +1,93 @@
+extends pug/base
+
+append vars
+    - title = 'Название ресторана'
+    - body.classList = ['inner-page']
+block content
+    - var defaultLink = 'javascript:void(0);'
+    include pug/partials/header
+    .i-container
+        .i-main
+            include pug/partials/page-title
+            .inner-content.container
+                include pug/partials/sidebar
+                .content
+                    .default-section
+                        p Гостиница Азия Ташкент предлагает помещения для конференций, а также профессиональный подход, что обеспечит успех всевозможных мероприятий - от закрытого заседания до крупной конференции. Профессиональные и опытные менеджеры помогут Вам организовать меню кофейных пауз, размещение участников и настроят аудиовизуальное оборудование. Планируете ли Вы большую конференцию, или же неофициальное мероприятие с коллегами, мы понимаем из чего должен состоять этап планирования, организации встречи и услуг питания. Мы можем помочь Вам в планировании вашего мероприятия - от первоначального запроса до окончательного завершения. Гостиница Азия Ташкент предлагает бесплатный доступ к беспроводному интернету Wi-Fi для всех участников конференций, а также во всех общественных зонах.
+                    .services-section
+                        .services-section__title Услуги:
+                        .services
+                            .servicesItem
+                                .servicesItem__icon
+                                    span.wi-fi
+                                .servicesItem__text WI-FI
+                            .servicesItem
+                                .servicesItem__icon
+                                    span.poster
+                                .servicesItem__text Лекционные плакаты
+                            .servicesItem
+                                .servicesItem__icon
+                                    span.top-projector
+                                .servicesItem__text Проектор верхнего расположения
+                            .servicesItem
+                                .servicesItem__icon
+                                    span.dvd
+                                .servicesItem__text DVD и VCR
+                            .servicesItem
+                                .servicesItem__icon
+                                    span.dynamic
+                                .servicesItem__text Динамики
+                            .servicesItem
+                                .servicesItem__icon
+                                    span.kafedra
+                                .servicesItem__text Кафедра
+                            .servicesItem
+                                .servicesItem__icon
+                                    span.window
+                                .servicesItem__text Экран
+                            .servicesItem
+                                .servicesItem__icon
+                                    span.projector
+                                .servicesItem__text Проектор
+                            .servicesItem
+                                .servicesItem__icon
+                                    span.tv
+                                .servicesItem__text Телевизоры
+                            .servicesItem
+                                .servicesItem__icon
+                                    span.microphone
+                                .servicesItem__text Микрофоны
+                            .servicesItem
+                                .servicesItem__icon
+                                    span.headphone
+                                .servicesItem__text Наушники
+                            .servicesItem
+                                .servicesItem__icon
+                                    span.water
+                                .servicesItem__text минеральная Вода
+                    .section-line
+                    .cards
+                        .cardsItem.odd.one
+                            .cardsItem__image(style="background-image: url(images/restoran.jpg);")
+                            .cardsItem-content
+                                .cardsItem__title Зал Ташкент
+                                .cardsItem__text Краткое описание зала. Пример оформления текста в несколько строк. Краткое описание зала. 
+                                .cardsItem__btn
+                                    a.read-more(href=defaultLink) 
+                                        | подробнее
+                                        span
+                                            i.fa.fa-long-arrow-right
+                        .cardsItem.even.two
+                            .cardsItem__image(style="background-image: url(images/two.jpg);")
+                            .cardsItem-content
+                                .cardsItem__title Зал Азия
+                                .cardsItem__text Краткое описание зала. Пример оформления текста в несколько строк. Краткое описание зала. 
+                                .cardsItem__btn
+                                    a.read-more(href=defaultLink)
+                                        | подробнее
+                                        span
+                                            i.fa.fa-long-arrow-right
+                    include pug/partials/footer
+    .page-mask.mask-top
+    .page-mask.mask-bottom
+

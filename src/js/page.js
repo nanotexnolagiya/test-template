@@ -101,6 +101,116 @@ vars.$roomsFilterLink.on('click', (e) => {
 
 });
 
+vars.$moreSwitch.on('change', (e) => {
+    let $this = $(e.currentTarget);
+    if($this.is(':checked')){
+        vars.$moreWrap.slideToggle('slow');
+    }else{
+        vars.$moreWrap.slideToggle('slow');
+    }
+});
+
+$('.click-switch').on('click', function (e) {
+    e.preventDefault();
+    vars.$moreSwitch.trigger('click');
+});
+
+if(vars.$datepicker.length !== 0){
+    const langRu = {
+        "format": "MM/DD/YYYY",
+        "separator": " - ",
+        "applyLabel": "Готово",
+        "cancelLabel": "Отмена",
+        "fromLabel": "От",
+        "toLabel": "До",
+        "customRangeLabel": "Custom",
+        "weekLabel": "W",
+        "daysOfWeek": [
+            "Вс",
+            "Пн",
+            "Вт",
+            "Ср",
+            "Чт",
+            "Пт",
+            "Сб"
+        ],
+        "monthNames": [
+            "Январь",
+            "Февраль",
+            "Март",
+            "Апрель",
+            "Май",
+            "Июнь",
+            "Июль",
+            "Август",
+            "Сентябрь",
+            "Октябрь",
+            "Ноябрь",
+            "Декабрь"
+        ],
+        "firstDay": 1
+    };
+
+    var today = new Date();
+    var tdd = today.getDate();
+    var tmm = today.getMonth()+1; //January is 0!
+    var tyyyy = today.getFullYear();
+
+    if(tdd < 10) {
+        tdd = '0'+tdd
+    }
+
+    if(tmm < 10) {
+        tmm = '0'+tmm
+    }
+
+    Date.prototype.addDays = function(days) {
+        var dat = new Date(this.valueOf());
+        dat.setDate(dat.getDate() + days);
+        return dat;
+    };
+    var week = today.addDays(7);
+
+    var wdd = week.getDate();
+    var wmm = week.getMonth()+1; //January is 0!
+    var wyyyy = week.getFullYear();
+
+    if(wdd < 10) {
+        wdd = '0'+wdd
+    }
+
+    if(wmm < 10) {
+        wmm = '0'+wmm
+    }
+
+    week = wmm + '/' + wdd + '/' + wyyyy;
+
+    today = tmm + '/' + tdd + '/' + tyyyy;
+
+    vars.$datepicker.daterangepicker({
+        locale: langRu,
+        singleDatePicker: true,
+        autoUpdateInput: false,
+        autoApply: false,
+        opens: "right",
+        drops: "down"
+    }, function(start) {
+
+    });
+
+    vars.$datepicker.on('apply.daterangepicker', function(ev, picker) {
+        $(this).val(picker.startDate.format('DD-MM-YYYY'));
+        $(this).css('padding', '22px 3px 3px 8px');
+        $(this).siblings('label').addClass('form-group__label--active');
+    });
+
+    vars.$datepicker.on('cancel.daterangepicker', function(ev, picker) {
+        $(this).val('');
+    });
+
+    vars.$datepicker.val('');
+}
+
 vars.$window.scroll(() => {
     let pageHeight = vars.$pageTitle.innerHeight();
 

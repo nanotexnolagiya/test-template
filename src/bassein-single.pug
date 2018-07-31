@@ -1,0 +1,43 @@
+extends pug/base
+
+append vars
+    - title = 'Название процедуры'
+    - body.classList = ['inner-page']
+block content
+    - var defaultLink = 'javascript:void(0);'
+    include pug/partials/header
+    .i-container
+        .i-main
+            include pug/partials/page-title
+            .inner-content.container
+                include pug/partials/sidebar
+                .content
+                    .default-section
+                        img(src="images/restoran.jpg", alt="")
+                        p Эта страница является самой первой и главной точкой посетителя сайта, и, поэтому важно заполнить ее наиболее качественной и интересной информацией, ведь именно прочитав ее, посетитель решит – оставаться на сайте или искать необходимую информацию в другом месте. Наполняя этот блок информацией, необходимо отталкиваться от потенциальных покупателей, их желаний и потребностей. Расскажите вкратце об истории и деятельности Вашей компании, укажите ваши плюсы и отличия от конкурентов. Распишите о разделах сайта, укажите, где и что находиться, что можно найти в фотогалерее, каталоге продукции. Текст необходимо составлять живой, чтобы посетитель читал его быстро и легко, заинтересовываясь с каждой строчкой. Не стоит перегружать текст специальными терминами или писать объемный материал. Создайте лаконичное и интересное описание Вашей компании, полностью раскрывающее вид деятельности, достижения и плюсы.
+                    .section-line
+                    .section-back
+                            a.read-more(href=defaultLink)
+                                | назад
+                                span
+                                    i.fa.fa-long-arrow-left
+                    .widget
+                        .widget-title Так же смотрите:
+                        .three-gallery.gallery.owl-carousel
+                            a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                                .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                            a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                                .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                            a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                                .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                            a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                                .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                            a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                                .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                            a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                                .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+
+                    include pug/partials/footer
+    .page-mask.mask-top
+    .page-mask.mask-bottom
+

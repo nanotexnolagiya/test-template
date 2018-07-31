@@ -1,0 +1,38 @@
+extends pug/base
+
+append vars
+    - title = 'Название процедуры'
+    - body.classList = ['inner-page']
+block content
+    - var defaultLink = 'javascript:void(0);'
+    include pug/partials/header
+    .i-container
+        .i-main
+            include pug/partials/page-title
+            .inner-content.container
+                include pug/partials/sidebar
+                .content
+                    .gallery-section
+                        .galleryList
+                            .galleryListItem.odd
+                                .galleryListItem__image(style="background-image: url(images/restoran.jpg);")
+                                .galleryListItem-content
+                                    .galleryListItem__title Название категории галереи
+                                    .galleryListItem__btn
+                                        a.read-more(href=defaultLink) 
+                                            | подробнее
+                                            span
+                                                i.fa.fa-long-arrow-right
+                            .galleryListItem.even
+                                .galleryListItem__image(style="background-image: url(images/restoran.jpg);")
+                                .galleryListItem-content
+                                    .galleryListItem__title Название категории галереи
+                                    .galleryListItem__btn
+                                        a.read-more(href=defaultLink) 
+                                            | подробнее
+                                            span
+                                                i.fa.fa-long-arrow-right
+                    include pug/partials/footer
+    .page-mask.mask-top
+    .page-mask.mask-bottom
+

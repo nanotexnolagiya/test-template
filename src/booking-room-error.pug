@@ -31,7 +31,7 @@ block content
                                         label(for="children") Детей: 
                                 .form-wrap-4
                                     .form-group
-                                        input.datepicker(type="text" id="arrival")
+                                        input.datepicker.error(type="text" id="arrival")
                                         label(for="arrival") Дата заезда
                                     .form-group
                                         input.datepicker(type="text" id="departure")
@@ -43,10 +43,10 @@ block content
                                 .form-title Ваши контакты
                                 .form-wrap-2
                                     .form-group
-                                        input(type="email", id="email")
+                                        input.error(type="email", id="email")
                                         label(for="email") Электронная почта
                                     .form-group
-                                        input(type="text", id="phone")
+                                        input.error(type="text", id="phone")
                                         label(for="phone") Номер телефона
                             fieldset
                                 .form-title Дополнительные сведения
@@ -73,6 +73,10 @@ block content
                                         .form-group
                                             input(type="text", id="advent-time")
                                             label(for="advent-time") Время прибытия
+                            .message
+                                .alert.alert-danger
+                                    i.fa.fa-exclamation-triangle
+                                    | Все поля обязательны для заполнения. Заполните выделенные поля
                             .form-wrap
                                 #simple-captcha.visualCaptcha
                                     .visualCaptcha-possibilities

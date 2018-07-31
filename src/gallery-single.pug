@@ -1,0 +1,49 @@
+extends pug/base
+
+append vars
+    - title = 'Фотогалерея'
+    - body.classList = ['inner-page']
+block content
+    - var defaultLink = 'javascript:void(0);'
+    include pug/partials/header
+    .i-container
+        .i-main
+            include pug/partials/page-title
+            .inner-content.container
+                include pug/partials/sidebar
+                .content
+                    .gallery
+                        a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                            .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                        a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                            .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                        a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                            .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                        a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                            .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                        a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                            .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                        a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                            .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                        a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                            .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                        a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                            .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                        a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                            .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                        a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                            .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                        a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                            .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                        a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                            .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                    .section-line
+                    .section-back
+                            a.read-more(href=defaultLink)
+                                | назад
+                                span
+                                    i.fa.fa-long-arrow-left
+                    include pug/partials/footer
+    .page-mask.mask-top
+    .page-mask.mask-bottom
+

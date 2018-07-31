@@ -1,0 +1,73 @@
+extends pug/base
+
+append vars
+    - title = 'Бассейн и сауна'
+    - body.classList = ['inner-page']
+block content
+    - var defaultLink = 'javascript:void(0);'
+    include pug/partials/header
+    .i-container
+        .i-main
+            include pug/partials/page-title
+            .inner-content.container
+                include pug/partials/sidebar
+                .content
+                    .default-section
+                        p Оздоровительный Комплекс  «POOL & SAUNA»  приглашаем вас в путешествие – в мир здоровья и красоты. К услугам гостей гостиницы и посетителей крытый бассейн размером 13mX7m. с голубой гладью воды, финская сауна и массажный кабинет. Профессиональный массажист предлагает более 10 видов массажа и Spa-процедур. Для получения более подробной информации и размещения заказов по бронированию, пожалуйста, обращайтесь к администратору ОК «POOL & SAUNA».
+                    .section-line
+                    .widget
+                        .widget-title Бассейн
+                        .three-gallery.gallery.owl-carousel
+                            a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                                .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                            a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                                .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                            a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                                .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                            a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                                .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                            a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                                .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                            a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                                .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                    .widget
+                        .widget-title Сауна
+                        .three-gallery.gallery.owl-carousel
+                            a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                                .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                            a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                                .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                            a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                                .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                            a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                                .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                            a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                                .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                            a.galleryItem(href="images/restoran.jpg", data-fancybox="gallery")
+                                .galleryItem__image(style="background-image: url(images/restoran.jpg);")
+                    .widget
+                        .widget-title Виды массажа и СПА-процедур
+                        .three-gallery.basseins.owl-carousel
+                            .basseinsItem
+                                .basseinsItem__image(style="background-image: url(images/restoran.jpg);")
+                                .basseinsItem__title Название процедуры
+                            .basseinsItem
+                                .basseinsItem__image(style="background-image: url(images/restoran.jpg);")
+                                .basseinsItem__title Название процедуры. Пример в две и более строк
+                            .basseinsItem
+                                .basseinsItem__image(style="background-image: url(images/restoran.jpg);")
+                                .basseinsItem__title Название процедуры
+                            .basseinsItem
+                                .basseinsItem__image(style="background-image: url(images/restoran.jpg);")
+                                .basseinsItem__title Название процедуры
+                            .basseinsItem
+                                .basseinsItem__image(style="background-image: url(images/restoran.jpg);")
+                                .basseinsItem__title Название процедуры. Пример в две и более строк
+                            .basseinsItem
+                                .basseinsItem__image(style="background-image: url(images/restoran.jpg);")
+                                .basseinsItem__title Название процедуры
+
+                    include pug/partials/footer
+    .page-mask.mask-top
+    .page-mask.mask-bottom
+
