@@ -24,5 +24,10 @@ module.exports = {
 	$testimonialsSlider: $('.testimonials-slider'),
 	$otherPostContent: $('.other-postsItem-content'),
 	$pageModalMenu: $('.page-modal-menu'),
-	$headerContacts: $('.header-contacts__current')
+	$headerContacts: $('.header-contacts__current'),
+	$roomsFilterLink: $('.rooms-filter .rooms-filterItem__link'),
+	$roomsFilterItem: $('.rooms-filter .rooms-filterItem'),
+	$cardsItem: $('.cards .cardsItem'),
+	$roomGallery: $('.room-gallery'),
+	$fancybox: $('[data-fancybox="gallery"]')
 };

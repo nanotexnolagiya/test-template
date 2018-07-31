@@ -1,7 +1,7 @@
 extends pug/base
 
 append vars
-    - title = 'О гостинице'
+    - title = 'НОМЕРНОЙ ФОНД'
     - body.classList = ['inner-page']
 block content
     - var defaultLink = 'javascript:void(0);'
@@ -12,6 +12,138 @@ block content
             .inner-content.container
                 include pug/partials/sidebar
                 .content
+                    .default-section
+                        p
+                            | Эта страница является самой первой и главной точкой посетителя сайта, и, поэтому важно заполнить ее наиболее качественной и интересной информацией, ведь именно прочитав ее, посетитель решит – оставаться на сайте или искать необходимую информацию в другом месте. Наполняя этот блок информацией, необходимо отталкиваться от потенциальных покупателей, их желаний и потребностей. Расскажите вкратце об истории и деятельности Вашей компании, укажите ваши плюсы и отличия от конкурентов. Распишите о разделах сайта, укажите, где и что находиться, что можно найти в фотогалерее, каталоге продукции. Текст необходимо составлять живой, чтобы посетитель читал его быстро и легко, заинтересовываясь с каждой строчкой. Не стоит перегружать текст специальными терминами или писать объемный материал. Создайте лаконичное и интересное описание Вашей компании, полностью раскрывающее вид деятельности, достижения и плюсы.
+                    .rooms-filter-section
+                        .rooms-filter-title Какой тип размещение Вам нужен?
+                        .rooms-filter
+                            .rooms-filterItem.active
+                                a.rooms-filterItem__link(href="#", data-filter="all") Все номера
+                            .rooms-filterItem
+                                a.rooms-filterItem__link(href="#", data-filter=".one") Одноместные
+                            .rooms-filterItem
+                                a.rooms-filterItem__link(href="#", data-filter=".two") Двуместные
+                            .rooms-filterItem
+                                a.rooms-filterItem__link(href="#", data-filter=".three") Трёхместные
+                    .cards
+                        .cardsItem.odd.one
+                            .cardsItem__image(style="background-image: url(images/one.jpg);")
+                            .cardsItem-content
+                                .cardsItem__title «Standart» - одноместное размещение
+                                .cardsItem__price
+                                    | 160 000
+                                    span UZS
+                                include pug/partials/pleacure
+                                .cardsItem__btn
+                                    a.read-more(href=defaultLink) 
+                                        | подробнее
+                                        span
+                                            i.fa.fa-long-arrow-right
+                        .cardsItem.even.two
+                            .cardsItem__image(style="background-image: url(images/two.jpg);")
+                            .cardsItem-content
+                                .cardsItem__title «Standart» - двуместное размещение
+                                .cardsItem__price
+                                    | 160 000
+                                    span UZS
+                                include pug/partials/pleacure
+                                .cardsItem__btn
+                                    a.read-more(href=defaultLink)
+                                        | подробнее
+                                        span
+                                            i.fa.fa-long-arrow-right
+                        .cardsItem.odd.one
+                            .cardsItem__image(style="background-image: url(images/one.jpg);")
+                            .cardsItem-content
+                                .cardsItem__title «Deluxe» - одноместное размещение
+                                .cardsItem__price
+                                    | 160 000
+                                    span UZS
+                                include pug/partials/pleacure
+                                .cardsItem__btn
+                                    a.read-more(href=defaultLink)
+                                        | подробнее
+                                        span
+                                            i.fa.fa-long-arrow-right
+                        .cardsItem.even.two
+                            .cardsItem__image(style="background-image: url(images/two.jpg);")
+                            .cardsItem-content
+                                .cardsItem__title «Deluxe» - двуместное размещение
+                                .cardsItem__price
+                                    | 160 000
+                                    span UZS
+                                include pug/partials/pleacure
+                                .cardsItem__btn
+                                    a.read-more(href=defaultLink)
+                                        | подробнее
+                                        span
+                                            i.fa.fa-long-arrow-right
+                        .cardsItem.odd.one
+                            .cardsItem__image(style="background-image: url(images/one.jpg);")
+                            .cardsItem-content
+                                .cardsItem__title «Superior» - одноместное размещение
+                                .cardsItem__price
+                                    | 160 000
+                                    span UZS
+                                include pug/partials/pleacure
+                                .cardsItem__btn
+                                    a.read-more(href=defaultLink)
+                                        | подробнее
+                                        span
+                                            i.fa.fa-long-arrow-right
+                        .cardsItem.even.two
+                            .cardsItem__image(style="background-image: url(images/two.jpg);")
+                            .cardsItem-content
+                                .cardsItem__title «Superior» - двуместное размещение
+                                .cardsItem__price
+                                    | 160 000
+                                    span UZS
+                                include pug/partials/pleacure
+                                .cardsItem__btn
+                                    a.read-more(href=defaultLink)
+                                        | подробнее
+                                        span
+                                            i.fa.fa-long-arrow-right
+                        .cardsItem.odd.one
+                            .cardsItem__image(style="background-image: url(images/one.jpg);")
+                            .cardsItem-content
+                                .cardsItem__title «Samarkand suite» - одноместное размещение
+                                .cardsItem__price
+                                    | 160 000
+                                    span UZS
+                                include pug/partials/pleacure
+                                .cardsItem__btn
+                                    a.read-more(href=defaultLink)
+                                        | подробнее
+                                        span
+                                            i.fa.fa-long-arrow-right
+                        .cardsItem.even.two
+                            .cardsItem__image(style="background-image: url(images/two.jpg);")
+                            .cardsItem-content
+                                .cardsItem__title «Samarkand suite» - двуместное размещение
+                                .cardsItem__price
+                                    | 160 000
+                                    span UZS
+                                include pug/partials/pleacure
+                                .cardsItem__btn
+                                    a.read-more(href=defaultLink)
+                                        | подробнее
+                                        span
+                                            i.fa.fa-long-arrow-right
+                        .cardsItem.odd.three
+                            .cardsItem__image(style="background-image: url(images/one.jpg);")
+                            .cardsItem-content
+                                .cardsItem__title «Triple» - трёхместное размещение
+                                .cardsItem__price
+                                    | 160 000
+                                    span UZS
+                                include pug/partials/pleacure
+                                .cardsItem__btn
+                                    a.read-more(href=defaultLink)
+                                        | подробнее
+                                        span
+                                            i.fa.fa-long-arrow-right
                     include pug/partials/footer
     .page-mask.mask-top
     .page-mask.mask-bottom

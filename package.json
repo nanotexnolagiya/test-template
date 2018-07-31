@@ -50,6 +50,7 @@
 		"yargs": "12.0.1"
 	},
 	"dependencies": {
+		"@fancyapps/fancybox": "3.3.5",
 		"babel-polyfill": "6.26.0",
 		"eslint": "5.2.0",
 		"font-awesome": "4.7.0",

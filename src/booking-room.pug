@@ -1,0 +1,47 @@
+extends pug/base
+
+append vars
+    - title = 'О гостинице'
+    - body.classList = ['inner-page']
+block content
+    - var defaultLink = 'javascript:void(0);'
+    include pug/partials/header
+    .i-container
+        .i-main
+            include pug/partials/page-title
+            .inner-content.container
+                include pug/partials/sidebar
+                .content
+                    .booking-form
+                        form(action=defaultLink, method="post")
+                            fieldset
+                                .form-title Личные данные
+                                .form-wrap
+                                    .form-group
+                                        input(type="text" id="name")
+                                        label(for="name") Фамилия / имя
+                                    .form-group
+                                        input(type="text" id="citizenship")
+                                        label(for="citizenship") Гражданство
+                                    .form-group
+                                        input(type="text" id="person" value="1")
+                                        label(for="person") Взрослых: 
+                                    .form-group
+                                        input(type="text" id="children" value="0")
+                                        label(for="children") Детей: 
+                                .form-wrap
+                                    .form-group
+                                        input.datepicker(type="text" id="arrival")
+                                        label(for="arrival") Дата заезда
+                                    .form-group
+                                        input.datepicker(type="text" id="departure")
+                                        label(for="departure") Дата выезда
+                                    .form-group
+                                        input(type="text" id="room" value="1")
+                                        label(for="room") номер
+                                .form-title Ваши контакты
+
+                    include pug/partials/footer
+    .page-mask.mask-top
+    .page-mask.mask-bottom
+

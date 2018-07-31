@@ -76,6 +76,31 @@ vars.$headerContacts.on('click', (e) => {
 
 });
 
+vars.$fancybox.fancybox({
+	arrows: true,
+	buttons: ['close'],
+	transitionEffect: 'slide',
+});
+
+vars.$roomsFilterLink.on('click', (e) => {
+    e.preventDefault();
+    let $this = $(e.currentTarget);
+    let parent = $this.parent();
+    if(!parent.hasClass('active')){
+        let data = $this.attr('data-filter');
+        vars.$roomsFilterItem.removeClass('active');
+        parent.addClass('active');
+
+        if(data != 'all'){
+            vars.$cardsItem.hide('slow');
+            $('.cards .cardsItem' + data).show('slow');
+        }else{
+            vars.$cardsItem.show('slow');
+        }
+    }
+
+});
+
 vars.$window.scroll(() => {
     let pageHeight = vars.$pageTitle.innerHeight();
 

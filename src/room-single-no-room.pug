@@ -1,0 +1,79 @@
+extends pug/base
+
+append vars
+    - title = '«Standart» - одноместное размещение'
+    - body.classList = ['inner-page']
+block content
+    - var defaultLink = 'javascript:void(0);'
+    include pug/partials/header
+    .i-container
+        .i-main
+            include pug/partials/page-title
+            .inner-content.container
+                include pug/partials/sidebar
+                .content
+                    .room-single
+                        .room-info
+                            .room-gallery.owl-carousel
+                                a.room-galleryItem(href="images/one.jpg", data-fancybox="gallery")
+                                    .room-galleryItem__image(style="background-image: url(images/one.jpg);")
+                                a.room-galleryItem(href="images/two.jpg", data-fancybox="gallery")
+                                    .room-galleryItem__image(style="background-image: url(images/two.jpg);")
+                                a.room-galleryItem(href="images/one.jpg", data-fancybox="gallery")
+                                    .room-galleryItem__image(style="background-image: url(images/one.jpg);")
+                            .room-content
+                                .room-content-top
+                                    .room-price
+                                        | 160 000
+                                        span UZS
+                                    .room-currency
+                                        .room-currency__label Курс валюты:
+                                        | 1
+                                        span USD
+                                        | &nbsp;= 8064
+                                        span UZS
+                                include pug/partials/pleacure
+                                .room-booking
+                                    .room-booking__title Забронировать номер
+                                    .alert.alert-danger
+                                        i.fa.fa-exclamation-triangle
+                                        | Нет свободных номеров данного типа.
+                                        br
+                                        | Выберите пожалуйта другой тип номера.
+                                    .room-booking__count(style="display: none;") Доступно к бронированию: 5 номеров
+                                    .room-booking__btn(style="display: none;")
+                                        a.read-more(href=defaultLink)
+                                            span
+                                                i.fa.fa-long-arrow-right
+                        .default-section
+                            h2 Заголовок H2.
+                            p Эта страница является самой первой и главной точкой посетителя сайта, и, поэтому важно заполнить ее наиболее качественной и интересной информацией, ведь именно прочитав ее, посетитель решит – оставаться на сайте или искать необходимую информацию в другом месте.
+                        .section-back
+                            a.read-more(href=defaultLink)
+                                | назад
+                                span
+                                    i.fa.fa-long-arrow-left
+                        .section-line
+                        .widget
+                            .widget-title
+                                | Другие одноместные номера
+                            .slider-widget.owl-carousel
+                                - for(var i = 0; i < 5; i++)
+                                    .slider-widgetItem
+                                        .slider-widgetItem__image(style="background-image: url(images/rooms/room-1.png);")
+                                        .slider-widgetItem-content
+                                            .slider-widgetItem__title
+                                                | «Standart» - одноместное размещение
+                                            .slider-widgetItem__price
+                                                | 160 000
+                                                span UZS
+                                            include pug/partials/pleacure
+                                            .slider-widgetItem__btn
+                                                a.read-more(href=defaultLink)
+                                                    | подробнее
+                                                    span
+                                                        i.fa.fa-long-arrow-right
+                    include pug/partials/footer
+    .page-mask.mask-top
+    .page-mask.mask-bottom
+

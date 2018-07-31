@@ -29,7 +29,7 @@ vars.$contactTab.on('click', (e) => {
 
 vars.$document.ready(() => {
 	vars.$sliderWidget.owlCarousel({
-		item: 1,
+		items: 1,
 		nav: true,
 		navText: [
 			'<span class="fa fa-arrow-left"></span>',
@@ -39,12 +39,29 @@ vars.$document.ready(() => {
 	});
 	
 	vars.$testimonialsSlider.owlCarousel({
-		item: 1,
+		items: 1,
 		nav: true,
 		navText: [
 			'<span class="fa fa-arrow-left"></span>',
 			'<span class="fa fa-arrow-right"></span>'
 		],
 		dots: false,
+	});
+
+	vars.$roomGallery.owlCarousel({
+		nav : true,
+		navText: ['<i class="fa fa-arrow-left"></i>','<i class="fa fa-arrow-right"></i>'],
+		items: 1,
+		responsive:{
+			0:{
+				items:1
+			},
+			768:{
+				items:1
+			},
+			980:{
+				items:1
+			}
+		}
 	});
 })
