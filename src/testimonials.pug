@@ -1,0 +1,154 @@
+extends pug/base
+
+append vars
+    - title = 'Отзывы'
+    - body.classList = ['inner-page']
+block content
+    - var defaultLink = 'javascript:void(0);'
+    include pug/partials/header
+    .i-container
+        .i-main
+            include pug/partials/page-title
+            .inner-content.container
+                .content.no-side
+                    .testimonials
+                        .testimonialsItem
+                            .testimonialsItem__image(style="background-image: url(images/rooms/room-1.png);")
+                            .testimonialsItem__title
+                                | Александ климов
+                            .testimonialsItem__text
+                                | Люди склонны читать отзывы, даже если они не читают основной текст. Разумеется, если эти отзывы им интересны. Когда Вы отзываетесь лестно о чьей-то работе, товаре, явлении и т.д., Вы располагаете к себе единомышленников и людей, вовлеченных в то, о чем Вы пишете. Текст необходимо составлять живой, чтобы посетитель читал его быстро и легко, заинтересовываясь с ...
+                            .testimonialsItem__btn
+                                a.read-more(href=defaultLink)
+                                    | подробнее
+                                    span
+                                        i.fa.fa-long-arrow-right
+                        .testimonialsItem
+                            .testimonialsItem__image(style="background-image: url(images/rooms/room-1.png);")
+                            .testimonialsItem__title
+                                | Александ климов
+                            .testimonialsItem__text
+                                | Люди склонны читать отзывы, даже если они не читают основной текст. Разумеется, если эти отзывы им интересны. Когда Вы отзываетесь лестно о чьей-то работе, товаре, явлении и т.д., Вы располагаете к себе единомышленников и людей, вовлеченных в то, о чем Вы пишете. Текст необходимо составлять живой, чтобы посетитель читал его быстро и легко, заинтересовываясь с ...
+                            .testimonialsItem__btn
+                                a.read-more(href=defaultLink)
+                                    | подробнее
+                                    span
+                                        i.fa.fa-long-arrow-right
+                        .testimonialsItem
+                            .testimonialsItem__image(style="background-image: url(images/rooms/room-1.png);")
+                            .testimonialsItem__title
+                                | Александ климов
+                            .testimonialsItem__text
+                                | Люди склонны читать отзывы, даже если они не читают основной текст. Разумеется, если эти отзывы им интересны. Когда Вы отзываетесь лестно о чьей-то работе, товаре, явлении и т.д., Вы располагаете к себе единомышленников и людей, вовлеченных в то, о чем Вы пишете. Текст необходимо составлять живой, чтобы посетитель читал его быстро и легко, заинтересовываясь с ...
+                            .testimonialsItem__btn
+                                a.read-more(href=defaultLink)
+                                    | подробнее
+                                    span
+                                        i.fa.fa-long-arrow-right
+                        .testimonialsItem
+                            .testimonialsItem__image(style="background-image: url(images/rooms/room-1.png);")
+                            .testimonialsItem__title
+                                | Александ климов
+                            .testimonialsItem__text
+                                | Люди склонны читать отзывы, даже если они не читают основной текст. Разумеется, если эти отзывы им интересны. Когда Вы отзываетесь лестно о чьей-то работе, товаре, явлении и т.д., Вы располагаете к себе единомышленников и людей, вовлеченных в то, о чем Вы пишете. Текст необходимо составлять живой, чтобы посетитель читал его быстро и легко, заинтересовываясь с ...
+                            .testimonialsItem__btn
+                                a.read-more(href=defaultLink)
+                                    | подробнее
+                                    span
+                                        i.fa.fa-long-arrow-right
+                        .testimonialsItem
+                            .testimonialsItem__image(style="background-image: url(images/rooms/room-1.png);")
+                            .testimonialsItem__title
+                                | Александ климов
+                            .testimonialsItem__text
+                                | Люди склонны читать отзывы, даже если они не читают основной текст. Разумеется, если эти отзывы им интересны. Когда Вы отзываетесь лестно о чьей-то работе, товаре, явлении и т.д., Вы располагаете к себе единомышленников и людей, вовлеченных в то, о чем Вы пишете. Текст необходимо составлять живой, чтобы посетитель читал его быстро и легко, заинтересовываясь с ...
+                            .testimonialsItem__btn
+                                a.read-more(href=defaultLink)
+                                    | подробнее
+                                    span
+                                        i.fa.fa-long-arrow-right
+                    .pagination-section
+                        .pagination
+                            .paginationItem.nav.prev
+                                a.paginationItem__link(href=defaultLink) Предыдущий
+                            .paginationItem
+                                a.paginationItem__link(href=defaultLink) 1
+                            .paginationItem.active
+                                span.paginationItem__link 2
+                            .paginationItem
+                                a.paginationItem__link(href=defaultLink) 3
+                            .paginationItem.dots
+                                a.paginationItem__link(href=defaultLink) ...
+                            .paginationItem
+                                a.paginationItem__link(href=defaultLink) 10
+                            .paginationItem.nav.next
+                                a.paginationItem__link(href=defaultLink) Следующая
+                    .section-line
+                    .testimonials-form
+                        .form-title Отзывы
+                        form(action=defaultLink)
+                            .form-2.left
+                                .form-wrap-3.form-wrap
+                                    .form-group
+                                        input(type="text", id="name")
+                                        label(for="name") Фамилия / имя
+                                    .form-group
+                                        input(type="email", id="email")
+                                        label(for="email") Электронная почта
+                                    .form-group
+                                        input(type="file", id="file")
+                                        label(for="file") Загрузить фогорафию
+                            .form-2.right
+                                .form-wrap
+                                    .extends
+                                        .extends__title Допустимые форматы:
+                                        .extendsItem
+                                            .extendsItem__text JPG
+                                        .extendsItem
+                                            .extendsItem__text PNG
+                                        .extendsItem
+                                            .extendsItem__text GIF
+                                    .extends
+                                        .extends__title Максимальный вес фотографии
+                                        .extendsItem
+                                            .extendsItem__text 2mb
+                            .form-2.left
+                                .form-wrap-1.form-wrap
+                                    .form-group
+                                        textarea#message
+                                        label(for="message") Напишите свой отзыв
+                            .form-2.right
+                                .form-wrap
+                                    #simple-captcha.visualCaptcha
+                                        .visualCaptcha-possibilities
+                                            .img
+                                                a(href=defaultLink)
+                                                    img(src="images/icons/shirt.png", alt="")
+                                            .img
+                                                a(href=defaultLink)
+                                                    img(src="images/icons/headphone.png", alt="")
+                                            .img
+                                                a(href=defaultLink)
+                                                    img(src="images/icons/auto.png", alt="")
+                                            .img
+                                                a(href=defaultLink)
+                                                    img(src="images/icons/buggy.png", alt="")
+                                            .img
+                                                a(href=defaultLink)
+                                                    img(src="images/icons/coffee.png", alt="")
+                                            .img
+                                                a(href=defaultLink)
+                                                    img(src="images/icons/airplain.png", alt="")
+                                        .visualCaptcha-explanation
+                                            | Выберите&nbsp;
+                                            span.active «наушники»
+                                            | , чтобы подтвердить, что&nbsp;Вы не&nbsp;робот
+                                    .form-btn
+                                        a.read-more(href=defaultLink)
+                                            | подробнее
+                                            span
+                                                i.fa.fa-long-arrow-right
+                    include pug/partials/footer
+    .page-mask.mask-top
+    .page-mask.mask-bottom
+

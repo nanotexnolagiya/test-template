@@ -1,7 +1,7 @@
 extends pug/base
 
 append vars
-    - title = '«Standart» - одноместное размещение'
+    - title = 'Забронировать номер'
     - body.classList = ['inner-page']
 block content
     - var defaultLink = 'javascript:void(0);'
@@ -15,10 +15,30 @@ block content
                     .booking-form
                         form(action=defaultLink, method="post")
                             fieldset
+                                .form-title Тип номера
+                                .form-2
+                                    .form-wrap-2
+                                        .form-group.custom-select.error
+                                            select
+                                                option(selected="", disabled="") Выберите гостиницу
+                                                option(value="tashkent") Asia Ташент
+                                                option(value="samarkand") Asia Самарканд
+                                                option(value="bukhara") Asia Бухара
+                                                option(value="khiva") Asia Хива
+                                                option(value="fergana") Asia Фергана
+                                        .form-group.custom-select.room
+                                            select
+                                                option(selected="", disabled="") Выберите гостиницу
+                                                option(value="standart") «Standart» - одноместное размещение
+                                                option(value="deluxe") «Deluxe» - одноместное размещение
+                                                option(value="superior") «Superior» - одноместное размещение
+                                                option(value="suite") «Samarkand suite» - одноместное размещение
+                                                option(value="triple") «Triple» - трёхместное размещение
+                            fieldset
                                 .form-title Личные данные
                                 .form-wrap-4
                                     .form-group
-                                        input(type="text" id="name")
+                                        input.error(type="text" id="name")
                                         label(for="name") Фамилия / имя
                                     .form-group
                                         input(type="text" id="citizenship")
@@ -31,7 +51,7 @@ block content
                                         label(for="children") Детей: 
                                 .form-wrap-4
                                     .form-group
-                                        input.datepicker(type="text" id="arrival")
+                                        input.error.datepicker(type="text" id="arrival")
                                         label(for="arrival") Дата заезда
                                     .form-group
                                         input.datepicker(type="text" id="departure")
@@ -43,10 +63,10 @@ block content
                                 .form-title Ваши контакты
                                 .form-wrap-2
                                     .form-group
-                                        input(type="email", id="email")
+                                        input.error(type="email", id="email")
                                         label(for="email") Электронная почта
                                     .form-group
-                                        input(type="text", id="phone")
+                                        input.error(type="text", id="phone")
                                         label(for="phone") Номер телефона
                             fieldset
                                 .form-title Дополнительные сведения
@@ -73,6 +93,9 @@ block content
                                         .form-group
                                             input(type="text", id="advent-time")
                                             label(for="advent-time") Время прибытия
+                            .message.error
+                                    i.fa.fa-exclamation-triangle
+                                    | Все поля обязательны для заполнения. Заполните выделенные поля
                             .form-wrap
                                 #simple-captcha.visualCaptcha
                                     .visualCaptcha-possibilities

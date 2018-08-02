@@ -33,5 +33,7 @@ module.exports = {
 	$moreSwitch: $('#more-switch'),
 	$moreWrap: $('#more-wrap'),
 	$datepicker: $('.datepicker'),
-	$threeGallery: $('.three-gallery')
+	$threeGallery: $('.three-gallery'),
+	$fourGallery: $('.four-gallery'),
+	$tours: $('.tours')
 };

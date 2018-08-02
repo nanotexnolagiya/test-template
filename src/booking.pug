@@ -1,7 +1,7 @@
 extends pug/base
 
 append vars
-    - title = '«Standart» - одноместное размещение'
+    - title = 'Забронировать номер'
     - body.classList = ['inner-page']
 block content
     - var defaultLink = 'javascript:void(0);'
@@ -14,6 +14,26 @@ block content
                 .content
                     .booking-form
                         form(action=defaultLink, method="post")
+                            fieldset
+                                .form-title Тип номера
+                                .form-2
+                                    .form-wrap-2
+                                        .form-group.custom-select
+                                            select
+                                                option(selected="" disabled="") Выберите гостиницу
+                                                option(value="tashkent") Asia Ташент
+                                                option(value="samarkand") Asia Самарканд
+                                                option(value="bukhara") Asia Бухара
+                                                option(value="khiva") Asia Хива
+                                                option(value="fergana") Asia Фергана
+                                        .form-group.custom-select.room
+                                            select
+                                                option(selected="" disabled="") Выберите гостиницу
+                                                option(value="standart") «Standart» - одноместное размещение
+                                                option(value="deluxe") «Deluxe» - одноместное размещение
+                                                option(value="superior") «Superior» - одноместное размещение
+                                                option(value="suite") «Samarkand suite» - одноместное размещение
+                                                option(value="triple") «Triple» - трёхместное размещение
                             fieldset
                                 .form-title Личные данные
                                 .form-wrap-4

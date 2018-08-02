@@ -1,0 +1,64 @@
+extends pug/base
+
+append vars
+    - title = 'Название ресторана'
+    - body.classList = ['inner-page']
+block content
+    - var defaultLink = 'javascript:void(0);'
+    include pug/partials/header
+    .i-container
+        .i-main
+            include pug/partials/page-title
+            .inner-content.container
+                .content.no-side
+                    .default-section
+                        img(src="images/restoran.jpg", alt="")
+                        p Эта страница является самой первой и главной точкой посетителя сайта, и, поэтому важно заполнить ее наиболее качественной и интересной информацией, ведь именно прочитав ее, посетитель решит – оставаться на сайте или искать необходимую информацию в другом месте. Наполняя этот блок информацией, необходимо отталкиваться от потенциальных покупателей, их желаний и потребностей. Расскажите вкратце об истории и деятельности Вашей компании, укажите ваши плюсы и отличия от конкурентов. Распишите о разделах сайта, укажите, где и что находиться, что можно найти в фотогалерее, каталоге продукции. Текст необходимо составлять живой, чтобы посетитель читал его быстро и легко, заинтересовываясь с каждой строчкой. Не стоит перегружать текст специальными терминами или писать объемный материал. Создайте лаконичное и интересное описание Вашей компании, полностью раскрывающее вид деятельности, достижения и плюсы.
+                    .section-back.mt-20
+                            a.read-more(href=defaultLink)
+                                | назад
+                                span
+                                    i.fa.fa-long-arrow-left
+                    .section-line.mt-0
+                    .widget
+                        .widget-title Другие спецпредложения:
+                        .tours.owl-carousel
+                            .toursItem
+                                .toursItem__image(style="background-image: url(images/asia-tashkent.png);")
+                                .toursItem-content
+                                    .toursItem__title Заголовок спецпредложения. Пример оформления заголовка 
+                                    a.toursItem__link(href=defaultLink)
+                            .toursItem
+                                .toursItem__image(style="background-image: url(images/asia-tashkent.png);")
+                                .toursItem-content
+                                    .toursItem__title Заголовок спецпредложения. Пример оформления заголовка 
+                                    a.toursItem__link(href=defaultLink)
+                            .toursItem
+                                .toursItem__image(style="background-image: url(images/asia-tashkent.png);")
+                                .toursItem-content
+                                    .toursItem__title Заголовок спецпредложения. Пример оформления заголовка 
+                                    a.toursItem__link(href=defaultLink)
+                            .toursItem
+                                .toursItem__image(style="background-image: url(images/asia-tashkent.png);")
+                                .toursItem-content
+                                    .toursItem__title Заголовок спецпредложения. Пример оформления заголовка 
+                                    a.toursItem__link(href=defaultLink)
+                            .toursItem
+                                .toursItem__image(style="background-image: url(images/asia-tashkent.png);")
+                                .toursItem-content
+                                    .toursItem__title Заголовок спецпредложения. Пример оформления заголовка 
+                                    a.toursItem__link(href=defaultLink)
+                            .toursItem
+                                .toursItem__image(style="background-image: url(images/asia-tashkent.png);")
+                                .toursItem-content
+                                    .toursItem__title Заголовок спецпредложения. Пример оформления заголовка 
+                                    a.toursItem__link(href=defaultLink)
+                            .toursItem
+                                .toursItem__image(style="background-image: url(images/asia-tashkent.png);")
+                                .toursItem-content
+                                    .toursItem__title Заголовок спецпредложения. Пример оформления заголовка 
+                                    a.toursItem__link(href=defaultLink)
+                    include pug/partials/footer
+    .page-mask.mask-top
+    .page-mask.mask-bottom
+

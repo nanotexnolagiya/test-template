@@ -71,4 +71,18 @@ vars.$document.ready(() => {
 		items: 3,
 		margin: 10
 	});
+
+	vars.$fourGallery.owlCarousel({
+		nav : true,
+		navText: ['<i class="fa fa-arrow-left"></i>','<i class="fa fa-arrow-right"></i>'],
+		items: 4,
+		margin: 10
+	});
+
+	vars.$tours.owlCarousel({
+		nav : true,
+		navText: ['<i class="fa fa-arrow-left"></i>','<i class="fa fa-arrow-right"></i>'],
+		items: 5,
+		margin: 20
+	});
 })
