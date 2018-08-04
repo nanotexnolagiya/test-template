@@ -12,13 +12,17 @@ const sidebarText = () => {
     });
 }
 
+const filialsTabSlider = () => {
+    vars.$filialTab.eq(2).after(vars.$filialTab.first());
+}
+
 const iContainer = () => {
     vars.$iContainer.css({
         width: (vars.$window.innerWidth() - (199 + 170))
     });
 
     vars.$pageMask.css({
-        width: (vars.$window.innerWidth() - (199 + 170))
+        width: (vars.$window.innerWidth() - (199 + 150))
     });
 
     vars.$maskBottom.css({
@@ -64,9 +68,11 @@ const otherContentFix = () => {
 // }
 
 vars.$window.on('load', () => {
-    sidebarText();
-    iContainer();
-    otherContentFix();
+    if(vars.$window.innerWidth() > 1024){
+		sidebarText();
+		iContainer();
+		otherContentFix();
+	}
 });
 
 vars.$headerContacts.on('click', (e) => {
@@ -211,27 +217,61 @@ if(vars.$datepicker.length !== 0){
     vars.$datepicker.val('');
 }
 
-vars.$window.scroll(() => {
-    let pageHeight = vars.$pageTitle.innerHeight();
+if(vars.$window.innerWidth() < 768) {
+    filialsTabSlider();
 
-    if(vars.$window.scrollTop() > 0) {
-        if(!vars.$header.hasClass('scroll')) {
-            vars.$header.addClass('scroll');
-            vars.$pageTitleWrap.addClass('scroll');
-            vars.$maskBottom.addClass('scroll');
-            vars.$pageModalMenu.addClass('scroll');
-            vars.$sidebarFixed.css({
-                top: 138 + pageHeight
-            });
+    vars.$mainMenu.on('click', (e) => {
+        let $this = $(e.currentTarget);
+        let parent = $this.parent();
+        let siblings = parent.siblings();
+        
+        e.preventDefault();
+        if(parent.hasClass('open')){
+            parent.removeClass('open');
+        }else{
+            siblings.removeClass('open');
+            parent.addClass('open');
         }
-    }else {
-        vars.$header.removeClass('scroll');
-        vars.$pageTitleWrap.removeClass('scroll');
-        vars.$maskBottom.removeClass('scroll');
-        vars.$pageModalMenu.removeClass('scroll');
-        vars.$sidebarFixed.css({
-            top: 173 + pageHeight
-        });
-    }
+    });
+
+    vars.$fixBurger.on('click', (e) => {
+        e.preventDefault();
+        let $this = $(e.currentTarget);
+
+        if($this.hasClass('open')){
+            $this.removeClass('open');
+            vars.$mobileFixDropdown.slideUp();
+        }else{
+            $this.addClass('open');
+            vars.$mobileFixDropdown.slideDown();
+        }
+
+    });
+}
+
+vars.$window.scroll(() => {
+    if(vars.$window.innerWidth() > 1024) {
+		let pageHeight = vars.$pageTitle.innerHeight();
+
+		if(vars.$window.scrollTop() > 0) {
+			if(!vars.$header.hasClass('scroll')) {
+				vars.$header.addClass('scroll');
+				vars.$pageTitleWrap.addClass('scroll');
+				vars.$maskBottom.addClass('scroll');
+				vars.$pageModalMenu.addClass('scroll');
+				vars.$sidebarFixed.css({
+					top: 138 + pageHeight
+				});
+			}
+		}else {
+			vars.$header.removeClass('scroll');
+			vars.$pageTitleWrap.removeClass('scroll');
+			vars.$maskBottom.removeClass('scroll');
+			vars.$pageModalMenu.removeClass('scroll');
+			vars.$sidebarFixed.css({
+				top: 173 + pageHeight
+			});
+		}
+	}
 
 });

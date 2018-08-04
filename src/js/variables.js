@@ -13,7 +13,9 @@ module.exports = {
 	$burger: $('.hamburger'),
 	$burgerBtn: $('.burger-btn'),
 	$popUpBg: $('.pop-up-bg'),
+	$filialsTab: $('.filials-tab'),
 	$filialTab: $('.filials-tabItem'),
+	$filialsContent: $('.filials-content'),
 	$filialContent: $('.filials-contentItem'),
 	$contactTab: $('.contactsTabItem'),
 	$contactContent: $('.contactsContentItem'),
@@ -35,5 +37,8 @@ module.exports = {
 	$datepicker: $('.datepicker'),
 	$threeGallery: $('.three-gallery'),
 	$fourGallery: $('.four-gallery'),
-	$tours: $('.tours')
+	$tours: $('.tours'),
+	$mainMenu: $('.main-menu ul li.dropdown a'),
+	$fixBurger: $('.fix-burger'),
+	$mobileFixDropdown: $('.mobile-fix-dropdown'),
 };

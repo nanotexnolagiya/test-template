@@ -7,5 +7,6 @@ window.jQuery = $;
 import 'owl.carousel';
 import '@fancyapps/fancybox';
 import 'jquery-touchswipe';
+import 'daterangepicker';
 import WheelIndicator from 'wheel-indicator';
 window.WheelIndicator = WheelIndicator;

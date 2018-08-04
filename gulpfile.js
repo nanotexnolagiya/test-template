@@ -290,11 +290,11 @@ gulp.task('scss', () => {
 								removeAll: true
 							},
 							zindex: false
-					  })
+					})
 					: $.autoprefixer({
 							add: true,
 							browsers: ['> 0%']
-					  })
+					})
 			])
 		)
 		.pipe($.sourcemaps.write('.'))

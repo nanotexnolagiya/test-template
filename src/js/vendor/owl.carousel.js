@@ -1,7 +1,3 @@
-
-
-
-
 if (typeof Object.create !== "function") {
     Object.create = function (obj) {
         function F() {}
@@ -56,7 +52,7 @@ if (typeof Object.create !== "function") {
             var base = this;
 
             base.$elem.data("owl-originalStyles", base.$elem.attr("style"))
-                      .data("owl-originalClasses", base.$elem.attr("class"));
+                    .data("owl-originalClasses", base.$elem.attr("class"));
 
             base.$elem.css({opacity: 0});
             base.orignalItems = base.options.items;
@@ -785,10 +781,10 @@ if (typeof Object.create !== "function") {
                 isTouch;
 
             tempElem.style.cssText = "  -moz-transform:" + translate3D +
-                                  "; -ms-transform:"     + translate3D +
-                                  "; -o-transform:"      + translate3D +
-                                  "; -webkit-transform:" + translate3D +
-                                  "; transform:"         + translate3D;
+                                "; -ms-transform:"     + translate3D +
+                                "; -o-transform:"      + translate3D +
+                                "; -webkit-transform:" + translate3D +
+                                "; transform:"         + translate3D;
             regex = /translate3d\(0px, 0px, 0px\)/g;
             asSupport = tempElem.style.cssText.match(regex);
             support3d = (asSupport !== null && asSupport.length === 1);

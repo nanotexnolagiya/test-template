@@ -1,16 +1,20 @@
 import vars from './variables';
 
-vars.$filialTab.on('click', (e) => {
-	console.log();
+vars.$filialsTab.on('click', '.filials-tabItem', (e) => {
 	let $this = $(e.currentTarget);
 	let index = $this.index();
 
 	if(!$this.hasClass('active')){
 		vars.$filialTab.removeClass('active');
 		$this.addClass('active');
+		const id = $this.attr('data-id');
+		const temp = vars.$filialsTab.children().eq(index);
 
 		vars.$filialContent.removeClass('active');
-		vars.$filialContent.eq(index).addClass('active');
+		vars.$filialsContent.children(id).addClass('active');
+
+		vars.$filialsTab.children().eq(index).remove();
+		vars.$filialsTab.children().eq(1).after(temp);
 	}
 });
 
@@ -85,4 +89,14 @@ vars.$document.ready(() => {
 		items: 5,
 		margin: 20
 	});
+
+	if(vars.$window.innerWidth() < 768) {
+		// vars.$filialsTab.owlCarousel({
+		// 	items: 5,
+		// 	center: true,
+		// 	loop: true,
+		// 	nav: false,
+		// 	dots: false,
+		// });
+	}
 })

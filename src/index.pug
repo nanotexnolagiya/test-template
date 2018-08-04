@@ -146,6 +146,18 @@ block content
 				.cube-slider__item.cube-slider__item_active(style="background-image: url(images/slide-4-min.jpg)")
 					.page
 						.container
+							.mobile-header
+								.socials
+									.socialsItem
+										a.socialsItem__link.facebook(href=defaultLink)
+									.socialsItem
+										a.socialsItem__link.instagram(href=defaultLink)
+								.logo
+								.langs
+									.langsItem.active
+										a.langsItem__link(href=defaultLink) Pyc
+									.langsItem
+										a.langsItem__link(href=defaultLink) Eng
 							.page-title-section
 								.cube-page-title
 									.cube-page-title__title
@@ -163,11 +175,11 @@ block content
 							.cube-content
 								.advantages
 									.advantagesItem
-										.advantagesItem__image(style="background-image: url(images/sprites/svg/adv-1.svg);")
+										.advantagesItem__image(style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"57\" height=\"42\"><path style=\"fill: #ffe9a0;fill-rule: evenodd;\" d=\"M701.837,445.945h-1.164v-5.178a1.157,1.157,0,0,0-1.163-1.151h-1.745v-5.753a9.267,9.267,0,0,0-9.306-9.206H677.99v-6.9h4.071a1.157,1.157,0,0,0,1.163-1.15v-2.3A2.316,2.316,0,0,0,680.9,412H668.1a2.316,2.316,0,0,0-2.326,2.3v2.3a1.156,1.156,0,0,0,1.163,1.15h4.071v6.9H660.541a9.267,9.267,0,0,0-9.306,9.206v5.753H649.49a1.158,1.158,0,0,0-1.164,1.151v5.178h-1.163A1.157,1.157,0,0,0,646,447.1v3.452A3.474,3.474,0,0,0,649.49,454h50.02a3.475,3.475,0,0,0,3.49-3.452V447.1A1.157,1.157,0,0,0,701.837,445.945ZM668.1,415.452V414.3h12.8v1.151H668.1Zm7.561,2.3v6.9h-2.326v-6.9h2.326Zm-22.1,16.11a6.95,6.95,0,0,1,6.98-6.9h27.918a6.95,6.95,0,0,1,6.98,6.9v5.753H653.561v-5.753Zm47.112,16.685a1.158,1.158,0,0,1-1.163,1.151H649.49a1.159,1.159,0,0,1-1.164-1.151v-2.3h44.2v-2.3H650.653v-4.027h47.694V447.1a1.158,1.158,0,0,0,1.163,1.151h1.163v2.3Zm-44.785-14.959h2.326a4.634,4.634,0,0,1,4.653-4.6v-2.3A6.95,6.95,0,0,0,655.888,435.589Z\" transform=\"translate(-646 -412)\"/></svg>');")
 										.advantagesItem__title
 											| Высокий уровень сервиса
 									.advantagesItem
-										.advantagesItem__image(style="background-image: url(images/sprites/svg/adv-2.svg);")
+										.advantagesItem__image(style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"43\" height=\"43\"><path style=\"fill: #ffe9a0;fill-rule: evenodd;\" d=\"M848.221,421.078h-5.127A6.3,6.3,0,0,0,838.059,411a5.653,5.653,0,0,0-4.855,2.359,24.429,24.429,0,0,0-2.7,5.6,24.429,24.429,0,0,0-2.7-5.6A5.654,5.654,0,0,0,822.941,411a6.3,6.3,0,0,0-5.035,10.078h-5.127A3.784,3.784,0,0,0,809,424.857v2.52a3.787,3.787,0,0,0,2.519,3.563v19.281A3.784,3.784,0,0,0,815.3,454h30.4a3.783,3.783,0,0,0,3.779-3.779V430.94a3.786,3.786,0,0,0,2.52-3.563v-2.52A3.784,3.784,0,0,0,848.221,421.078Zm-15.409-1.114c1.93-4.9,2.664-6.444,5.247-6.444a3.779,3.779,0,0,1,0,7.558h-5.687C832.526,420.69,832.673,420.317,832.812,419.964Zm-9.871-6.444c2.583,0,3.317,1.548,5.247,6.444,0.139,0.353.286,0.726,0.44,1.114h-5.687A3.779,3.779,0,0,1,822.941,413.52Zm2.52,37.96H815.3a1.261,1.261,0,0,1-1.26-1.259V431.156h11.422V451.48Zm0-22.843H812.779a1.262,1.262,0,0,1-1.26-1.26v-2.52a1.262,1.262,0,0,1,1.26-1.259h12.682v5.039Zm7.558,22.843H827.98V423.6h5.039V451.48Zm13.942-1.259a1.261,1.261,0,0,1-1.26,1.259H835.539V431.156h11.422v19.065Zm2.519-22.844a1.261,1.261,0,0,1-1.259,1.26H835.539V423.6h12.682a1.261,1.261,0,0,1,1.259,1.259v2.52Z\" transform=\"translate(-809 -411)\"/></svg>');")
 										.advantagesItem__title
 											| удивительные спецпредложения
 									.advantagesItem
@@ -191,19 +203,19 @@ block content
 										| В 5-ти городах Узбекистана
 								.cube-page-description
 									.filials-tab
-										.filials-tabItem.active
+										.filials-tabItem.active(data-id="#tashkent")
 											.filials-tabItem__link
 												| ASIA ТАШКЕНТ
-										.filials-tabItem
+										.filials-tabItem(data-id="#samarkand")
 											.filials-tabItem__link
 												| ASIA САМАРКАНД
-										.filials-tabItem
+										.filials-tabItem(data-id="#bukhara")
 											.filials-tabItem__link
 												| ASIA БУХАРА
-										.filials-tabItem
+										.filials-tabItem(data-id="#khiva")
 											.filials-tabItem__link
 												| ASIA ХИВА
-										.filials-tabItem
+										.filials-tabItem(data-id="#fergana")
 											.filials-tabItem__link
 												| ASIA ФЕРГАНА
 							.cube-content
@@ -238,7 +250,7 @@ block content
 												.filials-contentItem__image(style="background-image: url(images/asia-tashkent.png);")
 											.filial-right
 												.filials-contentItem__content
-													| Прекрасный отель с высоким качеством услуг, благоприятный как для групп путешественников, так и деловых людей. Asia Hotel Ташкент, обещает незабываемое впечатление от пребывания в Узбекистане
+													| Прекрасный отель с высоким качеством услуг, благоприятный как для групп путешественников, так и деловых людей. Asia Hotel САМАРКАНД, обещает незабываемое впечатление от пребывания в Узбекистане
 												.filials-contentItem__btn
 													a.more-btn(href=defaultLink)
 														| подробнее
@@ -256,7 +268,7 @@ block content
 												.filials-contentItem__image(style="background-image: url(images/asia-tashkent.png);")
 											.filial-right
 												.filials-contentItem__content
-													| Прекрасный отель с высоким качеством услуг, благоприятный как для групп путешественников, так и деловых людей. Asia Hotel Ташкент, обещает незабываемое впечатление от пребывания в Узбекистане
+													| Прекрасный отель с высоким качеством услуг, благоприятный как для групп путешественников, так и деловых людей. Asia Hotel БУХАРА, обещает незабываемое впечатление от пребывания в Узбекистане
 												.filials-contentItem__btn
 													a.more-btn(href=defaultLink)
 														| подробнее
@@ -274,7 +286,7 @@ block content
 												.filials-contentItem__image(style="background-image: url(images/asia-tashkent.png);")
 											.filial-right
 												.filials-contentItem__content
-													| Прекрасный отель с высоким качеством услуг, благоприятный как для групп путешественников, так и деловых людей. Asia Hotel Ташкент, обещает незабываемое впечатление от пребывания в Узбекистане
+													| Прекрасный отель с высоким качеством услуг, благоприятный как для групп путешественников, так и деловых людей. Asia Hotel ХИВА, обещает незабываемое впечатление от пребывания в Узбекистане
 												.filials-contentItem__btn
 													a.more-btn(href=defaultLink)
 														| подробнее
@@ -292,7 +304,7 @@ block content
 												.filials-contentItem__image(style="background-image: url(images/asia-tashkent.png);")
 											.filial-right
 												.filials-contentItem__content
-													| Прекрасный отель с высоким качеством услуг, благоприятный как для групп путешественников, так и деловых людей. Asia Hotel Ташкент, обещает незабываемое впечатление от пребывания в Узбекистане
+													| Прекрасный отель с высоким качеством услуг, благоприятный как для групп путешественников, так и деловых людей. Asia Hotel ФЕРГАНА, обещает незабываемое впечатление от пребывания в Узбекистане
 												.filials-contentItem__btn
 													a.more-btn(href=defaultLink)
 														| подробнее
@@ -464,6 +476,19 @@ block content
 															| Отправить
 															span
 																i.fa.fa-long-arrow-right
+							.mobile-footer
+								.copyright
+									.copyright__title
+										| © СП ООО «Asia Trade», 2018
+									.copyright__description
+										| Сеть Гостиниц «Азия» в 5-ти городах Узбекистана: 
+										br
+										| Ташкент, Самарканд, Бухара, Хива, Фергана
+								.korden
+									.korden__logo
+									.korden__text
+										| Создание сайтов в Ташкенте
+									a.korden__link(href="http://korden.uz")
 					.mask
 			.bullets-wrap
 				.bullets
@@ -472,6 +497,17 @@ block content
 					.bullets__item
 					.bullets__item
 			.scroll-content
+			.mobile-footer-fixed
+				.container
+					.fixed-menu
+						.fixed-menuItem
+							.fixed-menuItem__link
+								i.fa.fa-home
+								| главная
+						.fixed-menuItem
+							.fixed-menuItem__link.fix-burger
+								span.burger
+								| меню
 			.home-footer
 				.container
 					.home-footer-section
@@ -487,4 +523,120 @@ block content
 							.korden__text
 								| Создание сайтов в Ташкенте
 							a.korden__link(href="http://korden.uz")
+			.mobile-fix-dropdown
+				.container
+					.main-menu
+						ul
+							li.dropdown
+								a(href="#") О компании
+								ul.sub-menu
+									li
+										a(href="#") О сети гостиниц
+									li
+										a(href="#") Турагентство
+							li.dropdown
+								a(href="#") Гостиницы
+								ul.sub-menu
+									li.dropdown
+										a(href="#") Asia Ташкент
+										ul.sub-menu
+											li
+												a(href="#") О гостинице
+											li
+												a(href="#") Номерной фонд
+											li
+												a(href="#") Ресторан и бар
+											li
+												a(href="#") Конференсии и суминары
+											li
+												a(href="#") Бассейн и сауна
+											li
+												a(href="#") Фотогалерея
+											li
+												a(href="#") Правила отеля
+									li.dropdown
+										a(href="#") Asia Самарканд
+										ul.sub-menu
+											li
+												a(href="#") О гостинице
+											li
+												a(href="#") Номерной фонд
+											li
+												a(href="#") Ресторан и бар
+											li
+												a(href="#") Конференсии и суминары
+											li
+												a(href="#") Бассейн и сауна
+											li
+												a(href="#") Фотогалерея
+											li
+												a(href="#") Правила отеля
+									li.dropdown
+										a(href="#") Asia Бухара
+										ul.sub-menu
+											li
+												a(href="#") О гостинице
+											li
+												a(href="#") Номерной фонд
+											li
+												a(href="#") Ресторан и бар
+											li
+												a(href="#") Конференсии и суминары
+											li
+												a(href="#") Бассейн и сауна
+											li
+												a(href="#") Фотогалерея
+											li
+												a(href="#") Правила отеля
+									li.dropdown
+										a(href="#") Asia Фергана
+										ul.sub-menu
+											li
+												a(href="#") О гостинице
+											li
+												a(href="#") Номерной фонд
+											li
+												a(href="#") Ресторан и бар
+											li
+												a(href="#") Конференсии и суминары
+											li
+												a(href="#") Бассейн и сауна
+											li
+												a(href="#") Фотогалерея
+											li
+												a(href="#") Правила отеля
+									li.dropdown
+										a(href="#") Asia Хива
+										ul.sub-menu
+											li
+												a(href="#") О гостинице
+											li
+												a(href="#") Номерной фонд
+											li
+												a(href="#") Ресторан и бар
+											li
+												a(href="#") Конференсии и суминары
+											li
+												a(href="#") Бассейн и сауна
+											li
+												a(href="#") Фотогалерея
+											li
+												a(href="#") Правила отеля
+							li.dropdown
+								a(href=defaultLink) Пресс-центр
+								ul.sub-menu
+									li
+										a(href="#") Спецпредложения
+									li
+										a(href="#") мероприятия и события
+									li
+										a(href="#") отзывы
+							li.dropdown
+								a(href=defaultLink) Контакты
+								ul.sub-menu
+									li
+										a(href="#") свяжитесь с нами
+									li
+										a(href="#") забронировать номер
+
 			.pop-up-bg

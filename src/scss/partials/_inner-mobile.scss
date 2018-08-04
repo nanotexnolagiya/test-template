@@ -1,0 +1,76 @@
+.header {
+	padding: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100%;
+}
+
+.header .header-main {
+	padding: 15px 0 20px;
+}
+
+.header-section {
+	width: 320px;
+	margin: 0 auto;
+}
+
+.header .header-main .header-section .inner-logo-section .logo {
+	width: 93px;
+	height: 51px;
+}
+
+.sidebar {
+	display: none;
+}
+
+.i-container .i-main .inner-content .side-section {
+	display: none;
+}
+
+.i-container {
+	position: static;
+	width: 320px;
+	margin: auto;
+	padding-top: 190px;
+}
+
+.i-container .i-main .inner-content .content {
+	max-width: 100%;
+	width: 100%;
+	padding-left: 0;
+	margin-left: 0;
+	margin-top: 0;
+}
+
+.i-container .i-main {
+	padding-left: 0;
+}
+
+.i-container .i-main .page-title-wrap {
+	position: static;
+	top: 0;
+	padding-top: 0;
+	margin-bottom: 25px;
+	font-size: 28px;
+	line-height: 30px;
+}
+
+.i-container .i-main .inner-content .content .default-section > img {
+	margin-bottom: 25px;
+}
+
+.i-container .i-main .page-title-wrap .burger-section {
+	display: none;
+}
+
+.i-container .i-main .inner-content .content .default-section table {
+	width: 100%;
+	display: block;
+	white-space: nowrap;
+}
+
+
+.i-container .i-main .inner-content .content .testimonials-sliderItem__btn .read-more {
+	justify-content: flex-start;
+}

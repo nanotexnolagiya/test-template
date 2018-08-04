@@ -1,0 +1,272 @@
+body, .h-container, .h-container .h-main {
+    overflow: visible;
+    height: auto;
+}
+
+.h-container .h-main {
+    .header, .logo-section, .bullets-wrap, .home-footer, .mask {
+        display: none;
+    }
+
+    .container {
+        width: 320px;
+        margin: 0 auto;
+    }
+
+    .mobile-footer {
+        display: flex;
+    }
+
+    .mobile-footer-fixed {
+        display: block;
+    }
+
+    .cube-slider {
+        position: static;
+        display: block;
+        height: auto;
+        perspective: initial;
+        transform-style: initial;
+
+        &__item {
+            position: relative;
+            display: block;
+            min-height: initial;
+            padding: 50px 0;
+            perspective: initial;
+            transform-style: initial;
+            background-position: center;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to bottom, rgba(21,13,11,0.2) 0%,rgba(21,13,11,0.5) 50%,rgba(21,13,11,0.75) 75%,rgba(21,13,11,1) 100%);
+            }
+
+            &:first-child {
+                padding-top: 20px;
+
+                .page {
+                    .page-title-section {
+                        .cube-page-description {
+                            margin-top: 25px;
+                        }
+                    }
+                }
+            }
+
+            &:last-child {
+                padding-bottom: 82px;
+
+                &::after {
+                    background: linear-gradient(to bottom, rgba(21,13,11,0.2) 0%,rgba(21,13,11,0.5) 50%,rgba(21,13,11,1) 65%,rgba(21,13,11,1) 100%);
+                }
+            }
+
+            .page {
+                position: relative;
+                top: initial;
+                left: initial;
+                right: initial;
+                bottom: initial;
+
+                .mobile-header {
+                    display: flex;
+                }
+        
+                .page-title-section {
+                    
+                    .cube-page-title {
+                        flex-basis: 100%;
+                        max-width: 100%;
+                        padding: 0;
+                        border: 0;
+                        text-align: center;
+        
+                        &__btn {
+                            display: none;
+                        }
+                    }
+        
+                    .cube-page-description {
+                        flex-basis: 100%;
+                        max-width: 100%;
+                        margin: 0;
+                        padding: 0;
+                        text-align: justify;
+
+                        .filials-tab {
+                            position: absolute;
+                            top: 102px;
+                            left: 0;
+                            // left: 50%;
+                            // transform: translateX(-50%);
+                            // width: 470px;
+                            width: 100%;
+                            height: auto;
+                            justify-content: center;
+                            overflow: hidden;
+                            flex-wrap: nowrap;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+
+                .cube-content {
+                    .advantages {
+                        flex-basis: 100%;
+                        max-width: 100%;
+                        margin: 25px 0 0 0;
+                        padding: 0;
+
+                        &Item {
+                            flex-basis: calc(50% - 10px);
+                            max-width: calc(50% - 10px);
+                            margin-bottom: 20px;
+
+                            &:nth-child(2) {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+
+                    .filials-content {
+                        margin-top: 127px;
+
+                        &Item {
+                            .filial-title {
+                                display: none;
+                            }
+
+                            .filial-content {
+                                .filial-left {
+                                    padding: 0;
+                                    border: 0;
+
+                                    .filials-contentItem__image {
+                                        float: none;
+                                        margin: 0 auto 25px auto;
+                                    }
+                                }
+
+                                .filial-right {
+                                    flex: 0 0 100%;
+                                    max-width: 100%;
+                                    padding: 0;
+
+                                    .filials-contentItem__content {
+                                        text-align: justify;
+                                        margin-bottom: 25px;
+                                    }
+
+                                    .filials-contentItem__btn {
+                                        .more-btn {
+                                            justify-content: center;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .cube-events {
+                        &Item {
+                            flex-basis: 100%;
+                            max-width: 100%;
+                            padding: 0;
+                            margin-bottom: 30px;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+
+                            &__image {
+                                flex-basis: 100%;
+                                max-width: 100%;
+                                background-size: cover;
+                            }
+
+                            &-content {
+                                flex-basis: 100%;
+                                max-width: 100%;
+                                justify-content: center;
+                            }
+
+                            &__title {
+                                position: static;
+                                width: 100%;
+                                margin-bottom: 30px;
+                            }
+
+                            &__date {
+                                margin: 8px 0 7px 0;
+                            }
+                        }
+                    }
+
+                    .cube-contacts {
+                        .contacts-left {
+                            padding: 0;
+                        }
+
+                        .contactsTab {
+                            justify-content: center;
+
+                            &Item {
+                                &:first-child {
+                                    margin: 0 20px;
+                                }
+                            }
+                        }
+
+                        .contactsContent {
+                            &Item {
+                                .contactsWidget {
+                                    &Item {
+                                        text-align: left;
+
+                                        &__link {
+                                            span {
+                                                color: $color-home;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .all-contacts {
+                            justify-content: center;
+                        }
+                        
+                        .contacts-right {
+                            flex-basis: 100%;
+                            max-width: 100%;
+                            padding: 0;
+                        }
+
+                        .cube-form {
+                            margin-top: 50px;
+                            form {
+                                .form-wrap {
+                                    flex-basis: 100%;
+                                    max-width: 100%;
+
+                                    .btn-wrap {
+                                        justify-content: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import 'partials/inner-mobile';
