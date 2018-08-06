@@ -1,71 +1,9 @@
 import vars from "./variables";
-
-const sidebarText = () => {
-    var text = vars.$sideText;
-    var width = text.innerWidth(),
-        height = text.innerHeight();
-    var newWidth = (width * 145) / 100,
-        newHeight = height / 2;
-    text.css({
-        width: newWidth,
-        height: newHeight
-    });
-}
-
-const filialsTabSlider = () => {
-    vars.$filialTab.eq(2).after(vars.$filialTab.first());
-}
-
-const iContainer = () => {
-    vars.$iContainer.css({
-        width: (vars.$window.innerWidth() - (199 + 170))
-    });
-
-    vars.$pageMask.css({
-        width: (vars.$window.innerWidth() - (199 + 150))
-    });
-
-    vars.$maskBottom.css({
-        height: vars.$pageTitleWrap.innerHeight() + 30
-    });
-
-    vars.$pageTitleWrap.css({
-        width: (vars.$window.innerWidth() - (199 + 200))
-    });
-
-    let pageHeight = vars.$pageTitle.innerHeight();
-
-    vars.$content.css({
-        marginTop: 73 + pageHeight
-    });
-
-    vars.$sidebarFixed.css({
-        top: 173 + pageHeight
-    });
-}
-
-const otherContentFix = () => {
-    let size = 0;
-    vars.$otherPostContent.each((index, element) => {
-        let $this = $(element); 
-        if($this.innerHeight() > size) {
-            size = $this.innerHeight();
-        }
-    });
-
-    vars.$otherPostContent.css({
-        height: size
-    });
-    
-}
-
-// const pageTitleWrap = () => {
-
-// }
-
-// const pageSidebarPosition = () => {
-
-// }
+import dateLangRu from './partials/date-lang-ru';
+import otherContentFix from './partials/other-content-fix';
+import iContainer from './partials/i-container';
+import filialsTabSlider from './partials/filials-tab-slider';
+import sidebarText from './partials/sidebar-text';
 
 vars.$window.on('load', () => {
     if(vars.$window.innerWidth() > 1024){
@@ -122,40 +60,6 @@ $('.click-switch').on('click', function (e) {
 });
 
 if(vars.$datepicker.length !== 0){
-    const langRu = {
-        "format": "MM/DD/YYYY",
-        "separator": " - ",
-        "applyLabel": "Готово",
-        "cancelLabel": "Отмена",
-        "fromLabel": "От",
-        "toLabel": "До",
-        "customRangeLabel": "Custom",
-        "weekLabel": "W",
-        "daysOfWeek": [
-            "Вс",
-            "Пн",
-            "Вт",
-            "Ср",
-            "Чт",
-            "Пт",
-            "Сб"
-        ],
-        "monthNames": [
-            "Январь",
-            "Февраль",
-            "Март",
-            "Апрель",
-            "Май",
-            "Июнь",
-            "Июль",
-            "Август",
-            "Сентябрь",
-            "Октябрь",
-            "Ноябрь",
-            "Декабрь"
-        ],
-        "firstDay": 1
-    };
 
     var today = new Date();
     var tdd = today.getDate();
@@ -178,7 +82,7 @@ if(vars.$datepicker.length !== 0){
     var week = today.addDays(7);
 
     var wdd = week.getDate();
-    var wmm = week.getMonth()+1; //January is 0!
+    var wmm = week.getMonth() + 1; //January is 0!
     var wyyyy = week.getFullYear();
 
     if(wdd < 10) {
@@ -194,7 +98,7 @@ if(vars.$datepicker.length !== 0){
     today = tmm + '/' + tdd + '/' + tyyyy;
 
     vars.$datepicker.daterangepicker({
-        locale: langRu,
+        locale: dateLangRu,
         singleDatePicker: true,
         autoUpdateInput: false,
         autoApply: false,
@@ -217,7 +121,7 @@ if(vars.$datepicker.length !== 0){
     vars.$datepicker.val('');
 }
 
-if(vars.$window.innerWidth() < 768) {
+if(vars.$window.innerWidth() < 1024) {
     filialsTabSlider();
 
     vars.$mainMenu.on('click', (e) => {
@@ -246,6 +150,12 @@ if(vars.$window.innerWidth() < 768) {
             vars.$mobileFixDropdown.slideDown();
         }
 
+    });
+
+    vars.$contactsBtn.on('click', (e) => {
+        let $this = $(e.currentTarget);
+        let parentSiblings = $this.parent().siblings('.contactsItem__map');
+        parentSiblings.slideToggle();
     });
 }
 

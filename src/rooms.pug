@@ -26,6 +26,12 @@ block content
                                 a.rooms-filterItem__link(href="#", data-filter=".two") Двуместные
                             .rooms-filterItem
                                 a.rooms-filterItem__link(href="#", data-filter=".three") Трёхместные
+                        .mobile-rooms-filter.custom-select
+                            select(name="")
+                                option Все номера
+                                option Одноместные
+                                option Двуместные
+                                option Трёхместные
                     .cards
                         .cardsItem.odd.one
                             .cardsItem__image(style="background-image: url(images/one.jpg);")
@@ -147,4 +153,5 @@ block content
                     include pug/partials/footer
     .page-mask.mask-top
     .page-mask.mask-bottom
+    include pug/partials/mobile-menu
 

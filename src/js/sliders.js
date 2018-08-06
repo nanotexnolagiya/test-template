@@ -73,7 +73,38 @@ vars.$document.ready(() => {
 		nav : true,
 		navText: ['<i class="fa fa-arrow-left"></i>','<i class="fa fa-arrow-right"></i>'],
 		items: 3,
-		margin: 10
+		margin: 10,
+		responsive:{
+			0:{
+				items:1
+			},
+			768:{
+				items:1
+			},
+			1024:{
+				items:3
+			}
+		}
+	});
+
+	vars.$hotels.addClass('owl-carousel');
+
+	vars.$hotels.owlCarousel({
+		nav : true,
+		navText: ['<i class="fa fa-arrow-left"></i>','<i class="fa fa-arrow-right"></i>'],
+		items: 3,
+		margin: 10,
+		responsive:{
+			0:{
+				items:1
+			},
+			768:{
+				items:1
+			},
+			1024:{
+				items:3
+			}
+		}
 	});
 
 	vars.$fourGallery.owlCarousel({
@@ -87,16 +118,30 @@ vars.$document.ready(() => {
 		nav : true,
 		navText: ['<i class="fa fa-arrow-left"></i>','<i class="fa fa-arrow-right"></i>'],
 		items: 5,
-		margin: 20
+		margin: 20,
+		responsive:{
+			0: {
+				items:1,
+				margin: 30
+			},
+			1024: {
+				items:3,
+				margin: 20
+			},
+			1200: {
+				items:3,
+				margin: 20
+			}
+		}
 	});
 
 	if(vars.$window.innerWidth() < 768) {
-		// vars.$filialsTab.owlCarousel({
-		// 	items: 5,
-		// 	center: true,
-		// 	loop: true,
-		// 	nav: false,
-		// 	dots: false,
-		// });
+		vars.$otherPost.addClass('owl-carousel');
+		vars.$otherPost.owlCarousel({
+			nav : true,
+			navText: ['<i class="fa fa-arrow-left"></i>','<i class="fa fa-arrow-right"></i>'],
+			items: 1,
+			margin: 0
+		});
 	}
 })
