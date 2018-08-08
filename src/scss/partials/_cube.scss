@@ -1139,6 +1139,7 @@
                                 font-family: $font-pf-din-text-comp-pro;
                                 font-size: 18px;
                                 color: $color-home-header;
+                                transition: all 0.3s;
                                 border: {
                                     width: 2px;
                                     style: solid;
@@ -1147,23 +1148,6 @@
 
                                 &.error {
                                     border-color: $color-error;
-                                }
-
-                                &:focus{
-                                    padding: 22px 3px 3px 8px;
-                                    background: $color-black;
-                                    color: $color-home;
-                                    border: {
-                                        width: 2px;
-                                        style: solid;
-                                        color: $color-home;
-                                    }
-
-                                    + label{
-                                        transform: translateY(-10px) scale(0.8);
-                                        transform-origin: 0 0;
-                                        transition: transform .5s;
-                                    }
                                 }
                             }
 
@@ -1186,6 +1170,7 @@
                                 font-family: $font-pf-din-text-comp-pro;
                                 font-size: 18px;
                                 color: $color-home-header;
+                                transition: all 0.3s;
                                 border: {
                                     width: 2px;
                                     style: solid;
@@ -1195,22 +1180,47 @@
                                 &.error {
                                     border-color: $color-error;
                                 }
+                            }
 
-                                &:focus{
+                            &.focused {
+                                input {
                                     padding: 22px 3px 3px 8px;
                                     background: $color-black;
                                     color: $color-home;
                                     border: {
-                                        width: 2px;
-                                        style: solid;
-                                        color: $color-home;
+                                    width: 2px;
+                                    style: solid;
+                                    color: $color-home;
                                     }
+                                }
+                
+                                label {
+                                    transform: translateY(-10px) scale(0.8);
+                                    transform-origin: 0 0;
+                                    transition: transform .5s;
+                                }
+                
+                                textarea {
+                                    padding: 22px 3px 3px 8px;
+                                    background: $color-black;
+                                    color: $color-home;
+                                    border: {
+                                    width: 2px;
+                                    style: solid;
+                                    color: $color-home;
+                                    }
+                                }
+                            }
 
-                                    + label{
-                                        transform: translateY(-10px) scale(0.8);
-                                        transform-origin: 0 0;
-                                        transition: transform .5s;
-                                    }
+                            &.no-empty {
+                                input {
+                                    padding: 8px;
+                                }
+                                label {
+                                    opacity: 0;
+                                }
+                                textarea {
+                                    padding-top: 10px;
                                 }
                             }
 

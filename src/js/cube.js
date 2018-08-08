@@ -120,6 +120,25 @@ if(vars.$window.innerWidth() > 768) {
         });
     }
 
+    vars.$formInput.focus((e) => {
+        let $this = $(e.currentTarget);
+        let parent = $this.parent();
+    
+        parent.addClass('focused').removeClass('no-empty');
+    
+        }).blur((e) => {
+    
+            let $this = $(e.currentTarget);
+            let parent = $this.parent();
+    
+            if($this.val() === '') {
+                parent.removeClass('focused');
+            } else {
+                parent.addClass('no-empty');
+            }
+    
+        });
+
     vars.$burgerBtn.on('click', (e) => {
         e.preventDefault();
         const $this = $(e.currentTarget);

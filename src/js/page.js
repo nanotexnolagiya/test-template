@@ -4,6 +4,7 @@ import otherContentFix from './partials/other-content-fix';
 import iContainer from './partials/i-container';
 import filialsTabSlider from './partials/filials-tab-slider';
 import sidebarText from './partials/sidebar-text';
+import cardsDots from './partials/card-dots';
 
 vars.$window.on('load', () => {
     if(vars.$window.innerWidth() > 1024){
@@ -109,13 +110,16 @@ if(vars.$datepicker.length !== 0){
     });
 
     vars.$datepicker.on('apply.daterangepicker', function(ev, picker) {
-        $(this).val(picker.startDate.format('DD-MM-YYYY'));
-        $(this).css('padding', '22px 3px 3px 8px');
-        $(this).siblings('label').addClass('form-group__label--active');
+        let current = $(this);
+        let label = current.siblings();
+        let date = picker.startDate.format('DD-MM-YYYY');
+        label.text(date);
+        current.val(date);
     });
 
     vars.$datepicker.on('cancel.daterangepicker', function(ev, picker) {
-        $(this).val('');
+        let current = $(this);
+        current.val('');
     });
 
     vars.$datepicker.val('');
@@ -157,6 +161,77 @@ if(vars.$window.innerWidth() < 1024) {
         let parentSiblings = $this.parent().siblings('.contactsItem__map');
         parentSiblings.slideToggle();
     });
+}
+
+vars.$document.ready(() => {
+    cardsDots();
+});
+
+if(vars.$content.length > 0) {
+    vars.$formInput.on('change', (e) => {
+        let $this = $(e.currentTarget);
+        let label = $this.siblings();
+    
+        if($this.val().trim().length > 0){
+            label.text($this.val());
+        }else{
+            label.text(label.attr('data-default'));
+        }
+    });
+    
+    vars.$formInput.each((index, element) => {
+        $(element).siblings().attr('data-default', $(element).siblings().text());
+    });
+
+    vars.$room.on('change', (e) => {
+        let $this = $(e.currentTarget);
+        let label = $this.siblings();
+    
+        if($this.val().trim().length > 0){
+            label.text($this.val() + ' ' + label.attr('data-default'));
+        }else{
+            label.text(label.attr('data-default'));
+        }
+    });
+
+    vars.$person.on('change', (e) => {
+        let $this = $(e.currentTarget);
+        let label = $this.siblings();
+    
+        if($this.val().trim().length > 0){
+            label.text(label.attr('data-default') + $this.val());
+        }else{
+            label.text(label.attr('data-default'));
+        }
+    });
+
+    vars.$children.on('change', (e) => {
+        let $this = $(e.currentTarget);
+        let label = $this.siblings();
+    
+        if($this.val().trim().length > 0){
+            label.text(label.attr('data-default') + $this.val());
+        }else{
+            label.text(label.attr('data-default'));
+        }
+    });
+
+    const onlyNumber = (e) => {
+        var key = e.charCode || e.keyCode || 0;
+
+        if (key === 8 || key === 9 || key === 13 || key === 46 || key === 110 || key === 190 || (key >= 35 && key <= 40)) {
+
+        } else if ((key >= 48 && key <= 57) || (key >= 96 && key <= 105)) {
+
+        } else {
+            e.preventDefault();
+        }
+
+    };
+
+    vars.$room.keydown(onlyNumber);
+    vars.$person.keydown(onlyNumber);
+    vars.$children.keydown(onlyNumber);
 }
 
 vars.$window.scroll(() => {

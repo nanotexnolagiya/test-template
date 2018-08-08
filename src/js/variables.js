@@ -44,4 +44,10 @@ module.exports = {
 	$fixBurger: $('.fix-burger'),
 	$mobileFixDropdown: $('.mobile-fix-dropdown'),
 	$contactsBtn: $('.contactsItem__btn'),
+	$cardsDots: $('.cards-dots'),
+	$formInput : $('.form-group input'),
+	$formTextarea : $('.form-group textarea'),
+	$person: $('#person'),
+	$children: $('#children'),
+	$room: $('#room'),
 };
